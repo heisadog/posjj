@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/worktable.css"/>
+    <link rel="stylesheet" href="css/bill.css">
+    <title></title>
+</head>
+<body>
+<header>
+    <div id="back" class="back">&#xe697</div>
+    <span>入库单</span>
+</header>
+<div class="wfyCont os" style="height: calc(100% - 100px);height: -webkit-calc(100% - 100px)">
+    <div class="bill_basic">
+        <!--基础信息部分-->
+        <div class="bill_part_head">
+            <span>基本信息</span>
+            <i>&#xe6a6</i>
+        </div>
+        <ul class="bill_head_cont">
+            <li><span>仓/店</span><span>成都店</span></li>
+            <li><span>厂商</span><span></span></li>
+            <li><span>日期</span><span>2019-10-21</span></li>
+            <li><span>操作员</span><span>管理员</span></li>
+            <li><span>备注</span><span></span></li>
+        </ul>
+        <!--商品明细-->
+        <div class="bill_part_head">
+            <span>商品明细</span>
+            <i>&#xe6a6</i>
+        </div>
+        <div class="bill_part_butn">
+            <div>&#xe6ec</div>
+            <div>&#xe6b9</div>
+        </div>
+        <!--sku-->
+        <div class="bill_sku_box">
+            <!--一个sku-->
+            <div class="bill_sku">
+                <div class="bill_sku_product">
+                    <div class="bill_sku_product_name">1.TP-LINK001 <span class="bill_sku_delete">&#xe69d</span></div>
+                    <p class="b001">上衣</p>
+                </div>
+                <ul class="bill_sku_dtl">
+                    <li>
+                        <div class="bill_item thd ts200">
+                            <span>白色</span>
+                            <span>M</span>
+                            <span>56*2=111</span>
+                        </div>
+                        <div class="bill_drop">
+                            <span>&#xe6b9</span>
+                            <span>&#xe69d</span>
+                            <span>&#xe69a</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="bill_item thd ts200">
+                            <span>白色</span>
+                            <span>M</span>
+                            <span>56*2=111</span>
+                        </div>
+                        <div class="bill_drop">
+                            <span>&#xe6b9</span>
+                            <span>&#xe69d</span>
+                            <span>&#xe69a</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bill_sku">
+                <div class="bill_sku_product">
+                    <div class="bill_sku_product_name">1.TP-LINK001 <span class="bill_sku_delete">&#xe69d</span></div>
+                    <p class="b001">上衣</p>
+                </div>
+                <ul class="bill_sku_dtl">
+                    <li>
+                        <div class="bill_item thd ts200">
+                            <span>白色</span>
+                            <span>M</span>
+                            <span>56*2=111</span>
+                        </div>
+                        <div class="bill_drop">
+                            <span>&#xe6b9</span>
+                            <span>&#xe69d</span>
+                            <span>&#xe69a</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部按钮-->
+<div class="pub_bottom_btn">
+    <div class="pub_num">总数：<span>333</span></div>
+    <div class="pub_num">总额：<span>333</span></div>
+    <div class="pub_num pub_btn">保存</div>
+    <div class="pub_num pub_btn">审核</div>
+</div>
+
+<!--点击加号 底部弹出内容-->
+<div class="bill_bot_to_top y_100 thd ts200" id="bill_bot_to_top">
+    <div class="bill_slide_head">
+        <div class="b002">已选(<i>3</i>)</div>
+        <span>商品</span>
+        <div class="bill_slide_head_ok">完成</div>
+    </div>
+    <ul class="gx_list_1 os" style="position: fixed;top:37px; height: calc(100% - 37px)">
+        <li>
+            <div class="gx_list_1_cont">
+                <div class="gx_list_1_cont_img"><img src="public/img/wfylogo.png" alt=""></div>
+                <div class="gx_list_1_cont_item">
+                    <div>1.级别</div>
+                    <div>1.级别</div>
+                    <div>1.级别</div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<!--点击商品 右边弹出内容-->
+<div id="coverBack" class="pf cover"></div>
+<div id="storeBox" class="selectBox thd ts200 os">
+    <div class="b003">价格</div>
+    <div class="b004"><input type="text"/></div>
+    <div class="bline"></div>
+    <div class="b003">颜色</div>
+    <ul class="b005">
+        <li>红色</li>
+        <li>红色</li>
+    </ul>
+    <div class="bline"></div>
+    <div class="b003">尺码</div>
+    <ul class="b006">
+        <li>L  <div class="b0061"><em>-</em><em>0</em><em>+</em></div></li>
+        <li>M  <div class="b0061"><em>-</em><em>0</em><em>+</em></div></li>
+    </ul>
+    <div class="b007">
+        <div class="b0071 b00711">$0</div>
+        <div class="b0071 b00712">添加</div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="js/bill_add.js"></script>
+</body>
+</html>

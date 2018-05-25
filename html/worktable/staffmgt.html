@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/worktable.css"/>
+    <title></title>
+</head>
+<body>
+<header>
+    <div id="backBtn" class="back">&#xe697</div>
+    <span>员工管理</span>
+    <div id="add" class="head_add_btn">&#xe6b9</div>
+    <div id="sear" class="head_add_btn" style="right: 48px;font-size:18px;">&#xe6ac</div>
+</header>
+<div class="coutomer header_search none">
+    <div class="coutomer_li">
+        <form action="#">
+            <input type="search" id="search" results="5" class="search_input" placeholder="请输入员工姓名或手机号">
+        </form>
+    </div>
+    <div class="header_search_right">&#xe718</div>
+</div>
+<div class="view_box view_box_part1" style="height: calc(100% - 48px)">
+    <div class="wfyContList" style="height: 100%;">
+        <div id="cont">
+            <div id="searlist"></div>
+
+            <div class="scrollload none" id="scrollload">
+                <div class="scrollload_img"></div>
+                <span>正在加载更多内容</span>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="js/staffmgt.js"></script>
+</body>
+</html>

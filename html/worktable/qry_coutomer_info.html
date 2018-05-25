@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/worktable.css"/>
+    <title></title>
+</head>
+<body>
+<header>
+    <div id="backs" class="back">&#xe697</div>
+    <span>客户建档</span>
+    <div id="bottom" class="head_add_btn" style="font-size:16px;width: 60px">保存</div>
+</header>
+<ul class="cell_list_1" style="padding-top:50px;">
+    <li class="cell_list_1_none_icon">
+        <div class="cell_list_1_name">客&nbsp;户&nbsp;姓&nbsp;名：<span style="color:red;">*</span></div>
+        <input type="text" id="vipname" class="cell_list_1_select" value="" placeholder="请输入客户姓名"/>
+        <div class="cell_list_1_icon" style="font-size:20px;">&#xe651</div>
+    </li>
+    <li class="cell_list_1_none_icon">
+        <div class="cell_list_1_name">手&nbsp;机&nbsp;号&nbsp;码：<span style="color:red;">*</span></div>
+        <input type="text" id="vipMobile" class="cell_list_1_select" value="" placeholder="请输入手机号码"/>
+        <div class="cell_list_1_icon" style="font-size:20px;">&#xe651</div>
+    </li>
+    <li>
+        <div class="cell_list_1_name">客&nbsp;户&nbsp;性&nbsp;别：</div>
+        <input type="text" id="vipSex" class="cell_list_1_select" readonly="readonly" value="" placeholder="请选择会员性别"/>
+    </li>
+    <li>
+        <div class="cell_list_1_name">出&nbsp;生&nbsp;年&nbsp;月：</div>
+        <input type="text" id="vipBrithday" class="cell_list_1_select" readonly="readonly" value="" placeholder="请选择出生年月"/>
+    </li>
+    <li class="cell_list_1_none_icon">
+        <div class="cell_list_1_name">微&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;信：</div>
+        <input type="text" id="vipWX" class="cell_list_1_select" value="" placeholder="请输入微信号"/>
+        <div class="cell_list_1_icon" style="font-size:20px;">&#xe651</div>
+    </li>
+    <li>
+        <div class="cell_list_1_name">区&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;域：</div>
+        <input type="text" id="area" class="cell_list_1_select" readonly="readonly" value="" placeholder="请选择区域"/>
+    </li>
+    <li class="cell_list_1_none_icon">
+        <div class="cell_list_1_name">联&nbsp;系&nbsp;地&nbsp;址：</div>
+        <input type="text" id="vipAddress" class="cell_list_1_select" value="" placeholder="请输入联系地址"/>
+        <div class="cell_list_1_icon" style="font-size:20px;">&#xe651</div>
+    </li>
+    <li class="cell_list_1_none_icon">
+        <div class="cell_list_1_name">备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：</div>
+        <input type="text" id="vipbz" class="cell_list_1_select" value="" placeholder="请输入备注信息"/>
+        <div class="cell_list_1_icon" style="font-size:20px;">&#xe651</div>
+    </li>
+    <li class="cell_list_1_none_icon">
+        <div class="cell_list_1_name">授&nbsp;信&nbsp;额&nbsp;度：</div>
+        <input type="text" id="viped" class="cell_list_1_select" value="0" placeholder="请输入授信额度"/>
+        <div class="cell_list_1_icon" style="font-size:20px;">&#xe651</div>
+    </li>
+</ul>
+<div id="coverBack" class="pf cover none" style="z-index: 555"></div>
+<div id="multi_box" class="selectBox thd y100 ts200 os" style="height:20%;z-index: 999"></div>
+
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="../../public/frame/city-picker.min.js"></script>
+<script type="text/javascript" src="js/qry_coutomer_info.js"></script>
+</body>
+</html>

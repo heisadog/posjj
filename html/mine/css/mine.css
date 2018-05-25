@@ -1,0 +1,242 @@
+.address_dos div.btndefault{
+    float: left;
+}
+.address_dos div.btndel,.address_dos div.btnres{
+    float: right;
+}
+.address_dos div.btnres{
+    margin-right: 16px;
+}
+.address_dos div i{
+    padding-right: 8px;
+}
+.address_dos div:nth-child(1) i{
+    display: block;
+    padding: 0;
+    margin-top: 9px;
+    float: left;
+    width: 15px;
+    height: 15px;
+    line-height: 16px;
+    border-radius: 8px;
+    border: #999 solid 1px;
+    margin-right: 10px;
+    font-size:13px;
+    color: #fff;
+    text-align: center;
+}
+.address_dos div:nth-child(1) i.ch{
+    border: red solid 1px;
+    background-color: red;
+}
+/*快递详情*/
+.sertar{
+    padding: 12px;
+}
+.sertar li{
+    line-height: 28px;
+    font-size:12px;
+}
+/**/
+.coupon{
+	width: 96%;
+	height: 110px;
+	margin-top: 10px;
+	border-radius: 6px;
+	
+	background-color: #fff;
+}
+.cou_top {
+    line-height: 72px;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    width: 100%;
+    height: 72px;
+    background: #01AAEF;
+    background-image: -webkit-gradient(linear,50% 0,0 100%,from(transparent), color-stop(.5,transparent),color-stop(.5,#fff),to(#fff)),
+ -webkit-gradient(linear,50% 0,100% 100%,from(transparent), color-stop(.5,transparent),color-stop(.5,#fff),to(#fff));
+    background-image: -moz-linear-gradient(50% 0 -45deg,transparent,transparent 50%,#fff 50%,#fff),
+ -moz-linear-gradient(50% 0 -135deg,transparent,transparent 50%,#fff 50%,#fff);
+    background-size: 13px 12px;
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+}
+.cou_top img{
+    float: left;
+    margin-left: 20px;width: 140px;margin-top: 10px;
+}
+.cou_time{
+	line-height: 30px;
+	color: #666;
+	padding-left: 12px;
+	padding-right: 12px;
+	font-size: 13px;
+}
+.cou_time span:last-child{
+	float: right;
+}
+.cou_name{
+	padding-left:60px;
+	font-size: 20px;
+	color: #fff;
+}
+.iqianniu22{
+	font-size: 18px;
+	padding-left: 20px;
+	color: #fff;
+}
+.coupondtl_name{
+	line-height: 30px;
+	padding-left: 12px;
+	padding-right: 12px;
+	border-bottom: #f5f5f5 solid 1px;
+	color: #000;
+    position: relative;
+}
+.coupondtl_name::after{
+    content: "";
+    position: absolute;
+    right: 16px;
+    width: 9.6px;
+    height: 9.6px;
+    top: 52%;
+    border-top: 1.2px solid #888;
+    border-left: 1.2px solid #888;
+    margin-top: -7.2px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.coupondtl_jian::after{
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+.coupondtl_cont{
+	padding: 12px;
+	font-size: 13px;
+}
+.coupondtl_cont div.lis{
+	line-height: 26px;
+	border-bottom:#f5f5f5 dashed 1px;
+}
+.coupondtl_cont div.lis span{
+	padding-right: 60px;
+}
+.coupondtl_cont div.lis em{
+	float: right;
+}
+
+/*2018-5-14*/
+.tally{
+    width: 100%;height: 50px;line-height: 20px;
+    margin-top: 45px;
+    background-color: #fff;
+    border-bottom: #D9D9D9 solid 2px;
+}
+.tally p{
+    padding-left: 10px;
+}
+.tally p:first-child{
+    padding-top: 5px;
+    color: #1a1a1a;
+    font-size:13px;
+}
+.tally p:nth-child(2){
+    font-size:12px;
+}
+.tallyTime{
+    float: right;
+    margin-top: -45px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size:24px;
+    font-family: 'wfyfont';
+    line-height: 50px;
+}
+.bill_bot_to_top {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #f2f2f2;
+}
+.bill_slide_head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 111;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 14px;
+    color: #000;
+    border-bottom: #d9d9d9 solid 1px;
+}
+.bill_slide_head_ok{
+    width: 70px;
+}
+.bill_slide_head_ok:nth-of-type(2){
+    float: right;
+}
+.talltime{
+    position: relative;
+    line-height: 40px;
+    text-align: center;
+}
+.talltime input{
+    width: 80px;
+    padding: 5px 20px;
+    text-align: center;
+    border-bottom: #01AAEF solid 1px;
+}
+.tallsytle{
+    margin-left: 15px;
+    margin-top: 20px;
+    text-align: center;
+    width: 80px;
+    height: 28px;
+    line-height: 28px;
+    font-weight: 800;
+    height: 28px;
+    color: #000;
+    font-size:14px;
+    border-radius: 14px;
+    padding: 0px 5px;
+    border: #01AAEF solid 1px;
+}
+.talldele{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 40px;
+    font-family: 'wfyfont';
+}
+.tallitem{
+    line-height:24px;
+    background-color: #FFF;
+    text-align: left;
+    padding: 5px 12px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

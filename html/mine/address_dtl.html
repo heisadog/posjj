@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <!--<link rel="stylesheet" type="text/css" href="../worktable/css/worktable.css"/>-->
+    <link rel="stylesheet" href="../worktable/css/bill.css">
+    <!--<link rel="stylesheet" type="text/css" href="../home/css/home.css"/>-->
+    <title></title>
+</head>
+<body>
+<header>
+    <div id="back" class="back">&#xe697</div>
+    <span id="pagename">新增地址</span>
+    <div id="pro_save" class="head_add_btn" style="font-size:16px;width: 60px;">保存</div>
+</header>
+<div class="bill_basic" style="padding-top:45px">
+    <ul class="bill_head_cont thd ts200" id="headlist">
+        <li>
+            <span class="mus">类型</span>
+            <input class="createTime" id="type" data-type="02"  value="收货地址" readonly="true" placeholder="请选择类型">
+        </li>
+        <li>
+            <span class="mus">联系人</span>
+            <input class="createTime" id="name" placeholder="请输入姓名">
+        </li>
+        <li>
+            <span class="mus">手机</span>
+            <input class="createTime" type="tel" id="mobile" placeholder="请输入手机号码">
+        </li>
+        <li>
+            <span class="mus">省市区</span>
+            <input class="weui-input createTime" readonly="true" id="area" placeholder="请选择区域">
+        </li>
+        <li>
+            <span class="mus">地址</span>
+            <input class="createTime" id="address" placeholder="请输入地址">
+        </li>
+
+    </ul>
+</div>
+
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="../../public/frame/city-picker.js"></script>
+<script type="text/javascript" src="js/address_dtl.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/worktable.css"/>
+    <title></title>
+</head>
+<body>
+<header>
+    <div id="back" class="back">&#xe697</div>
+    <span>门店退货</span>
+</header>
+
+<section class="pos_body" style="padding-top: 50px">
+    <ul class="cell_list_1">
+        <li>
+            <div class="cell_list_1_name">销&nbsp;售&nbsp;店&nbsp;面：</div>
+            <input type="text" id="dianmian" class="cell_list_1_select" readonly="readonly" placeholder="请选择销售店面"/>
+        </li>
+        <li>
+            <div class="cell_list_1_name cell_list_1_none_icon">小&nbsp;票&nbsp;号&nbsp;码：</div>
+            <input type="text" id="xiaopiao" class="cell_list_1_select"  placeholder="请输入完整的小票号码"/>
+        </li>
+        <li class="cell_list_1_none_icon">
+            <div class="cell_list_1_name" >条&nbsp;形&nbsp;号&nbsp;码：</div>
+            <input type="text" id="tiaoma" class="cell_list_1_select"  placeholder="请输入条形码"/>
+            <div class="cell_list_1_icon" id="scanner">&#xe65b</div>
+        </li>
+        <li>
+            <div class="cell_list_1_name">起&nbsp;始&nbsp;日&nbsp;期：</div>
+            <input type="text" id="begintime" class="cell_list_1_select" readonly="readonly" value="" placeholder="请选择起始日期"/>
+        </li>
+        <li>
+            <div class="cell_list_1_name">截&nbsp;止&nbsp;日&nbsp;期：</div>
+            <input type="text" id="endtime" class="cell_list_1_select" readonly="readonly" value="" placeholder="请选择截止日期"/>
+        </li>
+    </ul>
+
+    <div class="bottom_position_btn thd ts200 y100 main_color" id="bottom">确定</div>
+
+</section>
+<div id="coverBack" class="pf cover none "></div>
+<div id="dianmiansel" class="selectBox thd y100 ts200 os"></div>
+
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="js/storeReturn_qry.js"></script>
+</body>
+</html>

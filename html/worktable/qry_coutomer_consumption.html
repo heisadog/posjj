@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/worktable.css"/>
+    <title></title>
+</head>
+<body>
+<header>
+    <div id="back" class="back">&#xe697</div>
+    <span>客户消费查询</span>
+    <div class="modles" id="modles">&#xe6ac</div>
+</header>
+
+<section class="view_box" style="height: calc(100% - 50px);
+    height: -webkit-calc(100% - 50px);">
+    <!--<div class="coutomer">
+        <div class="coutomer_line">
+            <input type="text" id="begintime" class="coutomer_input" placeholder="开始日期">
+            <input type="text" id="endtime" class="coutomer_input" placeholder="截止日期">
+        </div>
+        <div class="coutomer_line">
+            <input type="text" id="customer" class="coutomer_input" placeholder="客户">
+            <div class="coutomer_sear_btn" id="search">
+                查&nbsp;&nbsp;询
+            </div>
+        </div>
+    </div>-->
+    <ul class="stock_head" id="stock_head">
+        <li style="width: 30%">客户</li>
+        <li style="width: 20%">订单数</li>
+        <li style="text-indent: 12px;">数量</li>
+        <li style="width: 30%">金额</li>
+    </ul>
+    <div class="wfyContList" style="height: calc(100% - 95px);height: -webkit-calc(100% - 95px)">
+        <div id="cont">
+            <div id="searlist"></div>
+
+            <div class="scrollload none" id="scrollload">
+                <div class="scrollload_img"></div>
+                <span>正在加载</span>
+            </div>
+        </div>
+        <i style="visibility: hidden">...</i>
+    </div>
+</section>
+
+<!--<section class="view_box view_box_part1 thd ts200" id="part1">
+
+    <div class="coutomer">
+        <div class="coutomer_line">
+            <input type="text" id="begintime" class="coutomer_input" placeholder="开始日期">
+            <input type="text" id="endtime" class="coutomer_input" placeholder="截止日期">
+        </div>
+        <div class="coutomer_line">
+            <input type="text" id="customer" class="coutomer_input" placeholder="客户">
+            <div class="coutomer_sear_btn" id="search">
+                查&nbsp;&nbsp;询
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="wfyContList" style="height: calc(100% - 95px);height: -webkit-calc(100% - 95px)">
+        <div id="cont">
+            <div id="list" class="prodlist gray oh os" style="top:80px;bottom:0;font-size:15px;"></div>
+
+            <div class="scrollload none" id="scrollload">
+                <div class="scrollload_img"></div>
+                <span>正在加载</span>
+            </div>
+            <i style="visibility: hidden">...</i>
+        </div>
+    </div>
+</section>-->
+<div class="bottom_position_btn">
+    <p class="btncont">数量：<span id="tonum"></span></p>
+    <p class="btncont">业绩：<span id="toje"></span></p>
+</div>
+
+<div id="cover" class="pf cover none" style="z-index: 33"></div>
+<div id="search" class="selectTopBox thd y_100 ts200 os">
+    <div style="width: 100%;height: 50px"></div>
+    <ul class="topSearchBox">
+        <li>
+            <span>客户</span>
+            <input type="text" id="customer" placeholder="客户名">
+            <div class="delethis">&#xe69a</div>
+        </li>
+        <li>
+            <span>开始日期</span>
+            <input type="text" id="begintime"  readonly="readonly" placeholder="开始日期">
+            <!--<div class="delethis">&#xe69a</div>-->
+        </li>
+        <li class="nobor">
+            <span>截止日期</span>
+            <input type="text" id="endtime" readonly="readonly" placeholder="截止日期">
+            <!--<div class="delethis">&#xe69a</div>-->
+        </li>
+        <div class="topSearchBtn">
+            <span id="clear">清 除</span>
+            <span id="searbtn">查 询</span>
+        </div>
+    </ul>
+</div>
+
+
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="js/qry_coutomer_consumption.js"></script>
+</body>
+</html>

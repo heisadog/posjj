@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/worktable.css"/>
+    <title></title>
+</head>
+<body>
+<header>
+    <div id="back" class="back">&#xe697</div>
+    <span>考勤查询</span>
+    <div class="modles" id="modles" style="width: 40px">&#xe6ac</div>
+</header>
+<section class="view_box" style="height: calc(100% - 50px);
+    height: -webkit-calc(100% - 50px);">
+    <div class="tave" id="tablehead">
+        <ul class="stock_head" id="cale_tab">
+            <li style="width: 30%">门店</li>
+            <li style="width: 24%;text-indent:0px;">姓名</li>
+            <li style="width: 23%;text-align: center;">出勤天数</li>
+            <li style="width: 23%;text-align: center;">缺卡天数</li>
+        </ul>
+    </div>
+
+    <div class="wfyContList" style="height: calc(100% - 40px);height: -webkit-calc(100% - 40px)">
+        <div id="cont">
+            <div id="searlist" class="">
+
+            </div>
+            <div id="canvasDiv" class="none"></div>
+            <div class="scrollload none" id="scrollload">
+                <div class="scrollload_img"></div>
+                <span>正在加载更多内容</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="cover" class="pf cover none" style="z-index: 33"></div>
+<div id="search" class="selectTopBox thd y_100 ts200 os">
+    <div style="width: 100%;height: 50px"></div>
+    <ul class="topSearchBox">
+
+        <li>
+            <span>员工</span>
+            <input type="text" id="staff" placeholder="请输入员工名称">
+            <div class="delethis">&#xe69a</div>
+        </li>
+        <li>
+            <span>门店</span>
+            <input type="text" id="shop" readonly="readonly" placeholder="请选择门店">
+            <div class="delethis">&#xe69a</div>
+        </li>
+        <li class="jq_time">
+            <span>开始日期</span>
+            <input type="text" id="startdate" readonly="readonly" placeholder="请选择开始日期">
+            <div class="delethis">&#xe69a</div>
+        </li>
+        <li class="jq_time nobor">
+            <span>截止日期</span>
+            <input type="text" id="enddate" readonly="readonly" placeholder="请选择截止日期">
+            <div class="delethis">&#xe69a</div>
+        </li>
+        <div class="topSearchBtn">
+            <span id="clear">清 除</span>
+            <span id="searbtn">查 询</span>
+        </div>
+    </ul>
+</div>
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="js/qry_attendance.js"></script>
+</body>
+</html>

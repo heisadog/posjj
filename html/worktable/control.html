@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/worktable.css"/>
+    <title></title>
+</head>
+<style>
+    video{width: 100%;height: 100%;}
+</style>
+<body>
+<header>
+    <div id="back" class="back">&#xe697</div>
+    <span>仓库监控</span>
+</header>
+<div class="wfyCont os">
+    <video id="myPlayer" poster="" controls playsInline webkit-playsinline autoplay>
+        <source src="http://hls.open.ys7.com/openlive/5de62669bfd8499c93b88903d8eb6aaa.m3u8" type="" />
+        <source src="http://hls.open.ys7.com/openlive/5de62669bfd8499c93b88903d8eb6aaa.hd.m3u8" type="application/x-mpegURL" />
+    </video>
+</div>
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="../../public/frame/ezuikit.js"></script>
+<script>
+    var player = new EZUIPlayer('myPlayer');
+    player.on('error', function(){
+        console.log('error');
+    });
+    player.on('play', function(){
+        console.log('play');
+    });
+    player.on('pause', function(){
+        console.log('pause');
+    });
+
+</script>
+</body>
+</html>

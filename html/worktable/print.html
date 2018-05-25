@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/worktable.css"/>
+    <title></title>
+</head>
+<body>
+<header>
+    <div id="back" class="back">&#xe697</div>
+    <span>单据补打</span>
+    <div class="modles" id="modles" style="width: 40px">&#xe6ac</div>
+    <!--<span style="float: right" id="print">打印测试</span>-->
+</header>
+<div class="gx_taberbox" id="cs" style="padding-top: 48px"></div>
+
+<div class="wfyCont os" id="wfyCont" style="top:88px;height: calc(100% - 88px);
+    height: -webkit-calc(100% - 88px);">
+    <div id="wfyContList" >
+
+    </div>
+    <div class="scrollload none" id="scrollload">
+        <div class="scrollload_img"></div>
+        <span>正在加载</span>
+    </div>
+</div>
+
+<div id="cover" class="pf cover none" style="z-index: 33"></div>
+<div id="search" class="selectTopBox thd y_100 ts200 os">
+    <div style="width: 100%;height: 50px"></div>
+    <ul class="topSearchBox">
+        <li>
+            <span>日期从</span>
+            <input type="text" id="begin" readonly="readonly" placeholder="开始日期">
+            <!--<div class="delethis">&#xe69a</div>-->
+        </li>
+        <li class="nobor">
+            <span>到</span>
+            <input type="text" id="end" readonly="readonly" placeholder="截止日期">
+            <!--<div class="delethis">&#xe69a</div>-->
+        </li>
+        <div class="topSearchBtn">
+            <span id="clear">清 除</span>
+            <span id="searbtn">查 询</span>
+        </div>
+    </ul>
+</div>
+
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="../../public/frame/gbk.js"></script>
+<script type="text/javascript" src="js/print.js"></script>
+</body>
+</html>

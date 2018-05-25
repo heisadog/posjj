@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/worktable.css"/>
+    <title>销售明细查询</title>
+</head>
+<body>
+<header>
+    <div id="back" class="back">&#xe697</div>
+    <span>销售明细查询</span>
+    <div class="modles" id="modles">&#xe6ac</div>
+</header>
+<section class="view_box" style="height: calc(100% - 50px);height: -webkit-calc(100% - 50px);">
+    <ul class="stock_head" id="stock_head">
+        <li style="width: 25%;text-indent: 0px;" data-type="KS"><span class="check">款<i style="visibility: hidden">打</i>号</span></li>
+        <li style="width: 25%;text-indent: 0px;" data-type="WP"><span>款色码</span></li>
+        <li style="width: 25%" data-type="SL" data-code ='DESC'><span>实销数 <i>↓</i> </span></li>
+        <li style="width: 25%" data-type="JE" data-code ='DESC'><span>实销额 <i>↓</i></span></li>
+    </ul>
+    <div class="wfyContList" style="height: calc(100% - 90px);height: -webkit-calc(100% - 90px)">
+        <div id="cont">
+            <div id="searlist">
+
+                <!--<div class="list_2">
+                    <ul class="list_item_2">
+                        <li class="w40 tl">25FA001103XL</li>
+                        <li class="w20">个</li>
+                        <li class="w20">单价</li>
+                        <li class="w20">数量</li>
+                    </ul>
+                    <div class="list_item_2">
+                        <span>啦啦啦啦大苏打绿但是阿斯</span>
+                    </div>
+                </div>-->
+
+            </div>
+
+            <div class="scrollload none" id="scrollload">
+                <div class="scrollload_img"></div>
+                <span>正在加载更多内容</span>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="bottom_position_btn">
+    <p class="btncont">实销数：<span id="tonum">0</span></p>
+    <p class="btncont">实销额：<span id="toje">0</span></p>
+</div>
+
+<div id="cover" class="pf cover none" style="z-index: 33"></div>
+<div id="search" class="selectTopBox thd y_100 ts200 os">
+    <div style="width: 100%;height: 50px"></div>
+    <ul class="topSearchBox">
+        <li>
+            <span>款号</span>
+            <input type="text" id="girard" placeholder="款号">
+            <div class="delethis">&#xe69a</div>
+        </li>
+        <li>
+            <span>名称</span>
+            <input type="text" id="name" placeholder="名称">
+            <div class="delethis">&#xe69a</div>
+        </li>
+        <li>
+            <span>客户</span>
+            <input type="text" id="customer" placeholder="客户名">
+            <div class="delethis">&#xe69a</div>
+        </li>
+        <li>
+            <span>店员</span>
+            <input type="text" id="staff" placeholder="店员名">
+            <div class="delethis">&#xe69a</div>
+        </li>
+        <li>
+            <span>门店</span>
+            <input type="text" id="shop" readonly="readonly" placeholder="请输入门店">
+            <div class="delethis">&#xe69a</div>
+        </li>
+        <li>
+            <span>开始日期</span>
+            <input type="text" id="startdate" readonly="readonly" placeholder="开始日期">
+            <!--<div class="delethis">&#xe69a</div>-->
+        </li>
+        <li class="nobor">
+            <span>截止日期</span>
+            <input type="text" id="enddate" readonly="readonly" placeholder="截止日期">
+            <!--<div class="delethis">&#xe69a</div>-->
+        </li>
+        <div class="topSearchBtn">
+            <span id="clear">清 除</span>
+            <span id="searbtn">查 询</span>
+        </div>
+    </ul>
+</div>
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="js/qry_sales_dtl.js"></script>
+</body>
+</html>

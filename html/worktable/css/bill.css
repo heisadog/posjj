@@ -1,0 +1,685 @@
+.bill_basic{
+    width: 100%;
+    overflow: hidden;
+    /*background-color: #d9d9d9;*/
+}
+.bill_part_head{
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+.bill_part_head span{
+    font-size:16px;
+    color: #000;
+    padding-left: 12px;
+}
+.bill_part_head .bill_part_slubtn{
+    width: 40px;
+    height:39px;
+    text-align: center;
+    float: right;
+}
+.bill_part_head .bill_part_slubtn i{
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    color: #fff;
+    font-size:16px;
+    padding: 2px;
+}
+.bill_head_cont{
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+}
+.bill_inp_bx{
+    float: left;
+    width: calc(100% - 120px);
+    width: -webkit-calc(100% - 120px);
+    height: 20px;
+    margin-top: 10px;
+}
+.bill_inp_bx input{
+    float:left;
+    width: 100%;
+    background-color:transparent;
+    line-height: 20px;
+}
+.pay_inputandicon{
+    float: left;
+    width: calc(100% - 50px);
+    width: -webkit-calc(100% - 50px);
+    height: 36px;
+    margin-top: 4px;
+}
+
+.bill_radio_close{
+    float: right;
+    width: 34px;
+    height: 34px;
+    margin-right: 5px;
+    margin-top: 5px;
+    font-family: 'wfyfont';
+    line-height: 34px;
+    font-size:15px;
+    text-align: center;
+    /*display: none;*/
+}
+.bill_head_cont li{
+    width: 100%;height: 43px;
+    line-height: 43px;
+    border-bottom: #d9d9d9 solid 1px;
+    font-size:15px;
+}
+#pay_style{
+    padding-bottom: 30px;
+}
+#pay_style li{
+    line-height: 36px;
+    position: relative;
+}
+.bill_head_cont .bill_pay_icon{
+    float: left;
+    width: 44px;
+    height: 36px;
+    font-family: 'wfyfont';
+    text-align: center;
+    font-size:18px;
+}
+.bill_radio{
+    float: right;
+    margin-top: 15px;
+    margin-right: 15px;
+    width:8px;
+    height: 8px;
+    background-color: #d9d9d9;
+    position: relative;
+    border-radius: 50%;
+}
+.bill_radio::after{
+    position: absolute;
+    left:-5px;
+    top:-5px;
+    content: '';
+    width: 14px;
+    height: 14px;
+    border: #d9d9d9 solid 2px;
+    border-radius: 50%;
+}
+.bill_radio_ch{
+    background-color: red;
+}
+.bill_radio_ch::after{
+    border: red solid 2px;
+}
+.bill_head_cont li:last-child{
+    border-bottom: none;
+}
+.bill_head_cont li span{
+    float: left;
+    width: 60px;
+}
+.bill_head_cont li span:first-child{
+    width: 80px;
+    text-indent: 12px;
+    text-align: left;
+}
+.bill_head_cont li i.bill_kyed{
+    position: absolute;
+    height: 12px;line-height: 12px;
+    right: 44px;
+    bottom: 0;
+    color: darkgray;
+    font-size:9px;
+}
+.yiba li span:first-child{
+    width: 140px;
+}
+.mus::after{
+    content: ' *';
+    color: red;
+}
+.bill_head_cont li span:last-child,.bill_head_cont li input.createTime{
+    width: calc(100% - 140px);
+    width: -webkit-calc(100% - 140px);
+    text-align: center;
+    color: #333;
+    float: left;
+    padding: 12px 0;
+}
+#pay_style li span{
+    padding: 0;
+    text-align: left;
+}
+.yiba li input.createTime{
+    width: calc(100% - 190px);
+    width: -webkit-calc(100% - 190px);
+    text-align: left;
+}
+.comboadd{
+    float: right;
+    width: 44px;
+    font-family: 'wfyfont';
+    font-size:20px;
+    text-align: center;
+}
+
+.bill_part_butn{
+    width: 100%;
+    height: 40px;
+    position: relative;
+    background-color: #fff;
+}
+.bill_part_butn::after{
+    position: absolute;
+    left: 50%;
+    top:5px;
+    content: '';
+    width: 1px;
+    height: 30px;
+    background-color: #000;
+}
+.bill_part_butn div{
+    float: left;
+    width: 50%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size:30px;
+    font-family: "wfyfont";
+    color: #01AAEF;
+}
+
+.bill_sku_box{
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    margin-top: 10px;
+}
+.bill_sku{
+    width: 100%;
+    overflow: hidden;
+    border-bottom: #d9d9d9 solid 1px;
+}
+.bill_sku:first-child{
+    border-top: #d9d9d9 solid 1px;
+}
+.bill_sku_product{
+    margin-left: 12px;
+    margin-right: 12px;
+    width: auto;
+    height: 60px;
+}
+.bill_sku_product .bill_sku_product_name{
+    line-height: 36px;
+    color: #000;
+}
+.bill_sku_product .b001{
+    line-height: 24px;
+    font-size:13px;
+}
+.bill_sku_delete{
+    float: right;
+    width: 36px;
+    height: 36px;
+    color: red;
+    font-family: "wfyfont";
+}
+
+.bill_sku_dtl{
+    width: 100%;
+    overflow: hidden;
+}
+.bill_sku_dtl li{
+    width: 100%;
+    height: 36px;line-height: 36px;
+    position: relative;
+}
+.bill_sku_dtl li .bill_item,.bill_sku_dtl li .bill_drop{
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 100%;
+    height: 36px;
+    z-index: 22;
+    background-color: #fff;
+    border-top: #f2f2f2 solid 1px;
+}
+.bill_sku_dtl li .bill_item span{
+    font-size:12px;
+}
+.bill_sku_dtl li .bill_item span:nth-child(1){
+    padding-left: 12px;
+}
+.bill_sku_dtl li .bill_item span:nth-child(3){
+    color: red;
+    float: right;
+    padding-right: 12px;
+}
+.bill_sku_dtl li .bill_item span:nth-child(2){
+    padding-left: 30px;
+}
+.bill_sku_dtl li .bill_drop{
+    z-index: 1;
+    background-color: #d9d9d9;
+}
+.bill_sku_dtl li .bill_drop span{
+    float: right;
+    width: 40px;
+    height: 36px;
+    text-align: center;
+    font-family: "wfyfont";
+    margin: 0px 5px;
+    color: red;
+}
+.bill_sku_dtl li .bill_drop span.mxdtl_add{
+    font-size:20px;
+}
+.bill_sku_dtl li .bill_drop span.mxdtl_reduce{
+    font-size:20px;
+}
+/*dib底部弹出*/
+.bill_bot_to_top{
+    position: fixed;
+    left: 0;top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #f2f2f2;
+}
+.bill_slide_head{
+    position: fixed;
+    top: 0;left: 0;
+    z-index: 111;
+    width: 100%;
+    height: 36px;line-height: 36px;
+    text-align: center;
+    background-color: #fff;
+    font-size:14px;
+    color: #000;
+}
+.b002,.bill_slide_head_ok{
+    float: left;
+    width: 70px;
+}
+.bill_slide_head span{
+    font-weight: bold;
+}
+.bill_slide_head_ok{
+    float: right;
+}
+.b003{
+    line-height: 40px;
+    padding-left: 12px;
+    color: #000;
+    font-size:15px;
+}
+.b004{
+    margin-left: 12px;
+    margin-right: 12px;
+    line-height: 38px;
+    width: auto;
+    overflow: hidden;
+    position: relative;
+}
+.b004 input{
+    width: 100%;
+    height: 20px;
+    padding: 8px 0px;
+    background-color: transparent;
+}
+.b004::after{
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    content: '\e60b';
+    width: 30px;height: 20px;
+    font-size:24px;
+    font-family: "wfyfont";
+    z-index: -1;
+}
+.b005{
+    margin-left: 12px;
+    width: 330px;
+    height: 44px;
+}
+.b005 li{
+    width: auto;height: 24px;
+    float: left;
+    font-size:13px;
+    height: 20px;
+    background-color: #d9d9d9;
+    line-height: 20px;
+    border-radius: 5px;
+    padding: 1px 10px;
+    margin: 4px 8px;
+}
+.b005 li:first-child{
+    margin-left: 0;
+}
+.sku_price{padding: 5px 0px}
+.b005 li.colorcheck{
+    color: #fff;
+    background-color: #01AAEF;
+}
+.bline{
+    width: 100%;
+    height: 1px;
+    background-color: #d9d9d9;
+}
+.b006 li{
+    width: 100%;
+    line-height: 46px;
+    border-bottom: #d9d9d9 solid 1px;
+    font-size:14px;
+    color: #000;
+    font-weight: 900;
+}
+.b006 li em{
+    float: left;
+    width: 50px;
+    text-align: center;
+
+}
+.b006 li em.add,.b006 li em.reduce{
+    font-family: 'wfyfont';
+    font-size:20px;
+    color: #000;
+}
+
+.b006 .b0061{
+    float: right;
+    width: 150px;
+    line-height: 44px;
+}
+.b006{
+    width: calc(100% - 24px);
+    width: -webkit-calc(100% - 24px);
+    height: auto;
+}
+.b007{
+    height: 50px;
+    line-height: 50px;
+    font-size:14px;
+    background-color: #d9d9d9;
+}
+.b007 .b0071{
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+.b007 .b0071.b00711{
+    color: red;
+}
+.b007 .b0071.b00712{
+    background-color:red;
+    color: #fff;
+}
+.b008{
+    width: 100%;
+    height: 200px;
+}
+.b009{
+    width: 100%;
+    height: 200px;
+}
+.b010{
+    width: 100%;
+    height: 45px ;
+    overflow: auto;
+}
+.b006 li span.sku_style_num {
+    padding-left: 20px;
+    font-size: 12px;
+    font-weight: normal;
+}
+.b011{
+    width: 100%;
+    height: 100px;
+}
+.b012{
+    display: block;
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
+.b013{
+    float: right;
+    width: 44px;
+    height: 44px;
+    font-size:26px;
+    font-family: 'wfyfont';
+    text-align: center;
+    line-height: 44px;
+}
+.b006 input.num{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+/*动画*/
+.bill_slideup{
+    -webkit-animation: preloader-up 0.2s ease-in forwards;
+    animation: preloader-up 0.2s ease-in forwards ;
+}
+.bill_slidedown{
+    -webkit-animation: preloader-down 0.2s ease-in forwards;
+    animation: preloader-down 0.2s ease-in forwards ;
+}
+@keyframes preloader-up {
+    0%{
+        height: 200px;
+    }
+    25%{
+        height: 150px;
+    }
+    50%{
+        height: 100px;
+    }
+    75%{
+        height: 50px;
+    }
+    100% {
+        height: 0;
+    }
+}
+@keyframes preloader-down {
+    0%{
+        height: 0;
+    }
+    25%{
+        height: 50px;
+    }
+    50%{
+        height: 100px;
+    }
+    75%{
+        height: 150px;
+    }
+    100% {
+        height: auto;
+    }
+}
+
+
+
+/*----------------------------pos销售----------------------*/
+.swipebody{
+    width: 100%;
+    overflow: hidden;
+    padding-top: 45px;
+    padding-bottom: 50px;
+}
+.pos_bottom_btn{
+    position: fixed;
+    bottom: 0;left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+}
+.pos_bot_left{
+    float: left;
+    width: calc(100% - 80px);
+    width: -webkit-calc(100% - 80px);
+}
+.pos_sub{
+    float: right;
+    width: 80px;
+    height: 60px;
+    background-color: #f60;
+    line-height: 60px;
+    text-align: center;
+    font-size:16px;
+    color: #fff;
+}
+
+.pos_slideup{
+    -webkit-animation: posloader-up 0.2s ease-in forwards;
+    animation: posloader-up 0.2s ease-in forwards ;
+}
+.pos_slidedown{
+    -webkit-animation: posloader-down 0.2s ease-in forwards;
+    animation: posloader-down 0.2s ease-in forwards ;
+}
+@keyframes posloader-up {
+    0%{
+        height: auto;
+    }
+    25%{
+        height: 150px;
+    }
+    50%{
+        height: 100px;
+    }
+    75%{
+        height: 50px;
+    }
+    100% {
+        height: 0;
+    }
+}
+@keyframes posloader-down {
+    0%{
+        height: 0;
+    }
+    25%{
+        height: 50px;
+    }
+    50%{
+        height: 100px;
+    }
+    75%{
+        height: 150px;
+    }
+    100% {
+        height: auto;
+    }
+}
+/*选中支付方式*/
+.bill_head_cont li .poschecked span{
+    color: red;
+}
+.bill_head_cont li .poschecked .bill_pay_icon{
+    color: red;
+}
+/*搜索*/
+.coutomer{
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+}
+.header_search{
+    position: fixed;
+    width: 100%;
+    top: 36px;
+    height: 45px;
+    left: 0;
+    z-index: 122;
+}
+.header_search::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0px;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #01AAEF;
+}
+.coutomer_li{
+    margin-left: 12px;
+    margin-right: 12px;
+    width: auto;
+    height: 45px;
+    float: none;
+}
+.coutomer_lis{
+    width: calc(100% - 52px);
+    width: -webkit-calc(100% - 52px);
+    float: left;
+    height: 38px;
+    margin-left: 12px;
+    margin-right: 0;
+}
+.header_search_right{
+    float: right;
+    width: 40px;
+    height: 48px;
+    color: #01AAEF;
+    text-align: center;
+    line-height: 48px;
+    font-family: 'wfyfont';
+    font-size:20px;
+}
+
+.kehu_list li{
+    width: 100%;
+    line-height: 80px;
+    color: #333;
+}
+.kehu_list li span{
+    font-size:13px;
+    color: #999;
+}
+.kehudel{
+    width: 40px;
+    height: 39px;
+    text-align: center;
+    float: right;
+    font-family: 'wfyfont';
+    font-size:18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

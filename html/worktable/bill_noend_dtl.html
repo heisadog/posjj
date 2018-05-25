@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/worktable.css"/>
+    <link rel="stylesheet" href="css/bill.css">
+</head>
+</head>
+<body>
+<header>
+    <div id="back" class="back">&#xe697</div>
+    <span>订单详情</span>
+</header>
+<div class="swipebody">
+    <div class="bill_basic">
+        <!--基础信息部分-->
+        <div class="bill_part_head">
+            <span>基本信息</span>
+            <div class="bill_part_slubtn" id="slideup" data-win = 'down'><i>&#xe6a6</i></div>
+        </div>
+        <ul class="bill_head_cont thd ts200">
+            <li><span>仓/店</span><input class="createTime"  readonly="readonly"  id="dtl_createStore" placeholder=""></li>
+            <li><span>日期</span><input class="createTime" readonly="readonly" id="dtl_createDate" placeholder=""></li>
+            <li><span>店员</span><input class="createTime"  readonly="readonly"  id="dtl_createGuide" placeholder=""></li>
+            <li>
+                <span>客户</span>
+                <input class="createTime" readonly="readonly"  id="dtl_createKehu" placeholder="">
+                <div class="kehudel none">&#xe651</div>
+            </li>
+            <li class="js_createLX"><span>销售类型</span><input class="createTime" value="批发"  readonly="readonly" type="text"  id="createLX" placeholder=""></li>
+            <li class="js_createZK"><span>折扣</span><input class="createTime" type="number" max="100" min="1" value="100"  id="createZK" placeholder="100">%</li>
+        </ul>
+        <!--商品明细-->
+        <div class="bill_part_head js_hidebill">
+            <span>商品明细</span>
+        </div>
+        <div class="bill_part_butn js_hidebill">
+            <div id="scan">&#xe6ec</div>
+            <div id="add_url">&#xe6b9</div>
+        </div>
+        <!--sku-->
+        <div class="bill_sku_box js_hidebill" id="bill_sku_box">
+
+        </div>
+        <!--支付信息-->
+        <div class="bill_part_head" id="pay_head">
+            <span>支付方式</span>
+            <div class="bill_part_slubtn" id="slideups" data-win = 'down'><i>&#xe6a6</i></div>
+        </div>
+        <ul class="bill_head_cont pay_style" id="pay_style">
+        </ul>
+    </div>
+</div>
+<!--底部按钮-->
+<div class="pub_bottom_btn" id="pub_bottom_btn">
+    <!--<div class="pub_num">总数：<span id="totalNum">0</span></div>-->
+    <!--<div class="pub_num">总额：<span>￥</span><span id="totalMoney">0</span></div>-->
+    <!--<div class="pub_num pub_btn" id="sub" style="width: 120px">提交</div>-->
+</div>
+<!--点击加号 底部弹出内容-->
+<div class="bill_bot_to_top y100 thd ts200" id="bill_bot_to_top">
+    <div class="bill_slide_head">
+        <div class="b002">已选(<i id="numtotal">0</i>)</div>
+        <span>商品</span>
+        <div class="bill_slide_head_ok" id="bill_slide_head_ok">完成</div>
+    </div>
+    <div class="coutomer header_search" style="top: 36px">
+        <div class="coutomer_li">
+            <form action="#">
+                <input type="search" id="searchpro" results="5" class="search_input" placeholder="请输入商品名称或商品编码">
+            </form>
+        </div>
+    </div>
+    <ul id="ks_list" class="gx_list_1 os" style="position: fixed;top:81px; height: calc(100% - 81px)">
+        <!--<li>-->
+        <!--<div class="gx_list_1_cont">-->
+        <!--<div class="gx_list_1_cont_item">-->
+        <!--<div>1.级别</div>-->
+        <!--<div>1.级别</div>-->
+        <!--<div>1.级别</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</li>-->
+    </ul>
+</div>
+<!--点击商品 右边弹出内容-->
+<div id="billcoverBack" class="pf cover none"></div>
+<div id="storeBox" class="selectBox y100 thd ts200 os">
+    <div class="b011">
+        <img class="b012" src="" alt="" id="b011_img">
+        <span id="b011_mc" style="line-height: 150px"></span>
+        <div class="b013" id="bill_close">&#xe651</div>
+    </div>
+    <div class="b009">
+        <div class="b003">颜色</div>
+        <div class="b010">
+            <ul class="b005" id="sku_color">
+                <!--<li>红色</li>-->
+                <!--<li>红色</li>-->
+            </ul>
+        </div>
+        <div class="bline"></div>
+        <div class="b003">价格</div>
+        <div class="b004"><input type="number" id="sku_price" class="sku_price"/></div>
+        <div class="bline"></div>
+        <div class="b003">尺码</div>
+    </div>
+    <div class="b008 thd ts200 os" id="sku_style">
+        <!--<ul class="b006 ">-->
+        <!--<li>L  <div class="b0061"><em>-</em><em>0</em><em>+</em></div></li>-->
+        <!--<li>M  <div class="b0061"><em>-</em><em>0</em><em>+</em></div></li>-->
+        <!--</ul>-->
+    </div>
+    <div class="b007">
+        <div class="b0071 b00711" id="sum_money">0</div>
+        <div class="b0071 b00712" id="add_btn">添加</div>
+    </div>
+</div>
+
+<!--客户-->
+<div class="bill_bot_to_top y100 thd ts200" id="kehu">
+    <div class="bill_slide_head">
+        <div class="b002 hidden">已选(<i>0</i>)</div>
+        <span>客 户</span>
+        <div class="bill_slide_head_ok" id="kehu_can">取消</div>
+    </div>
+    <div class="coutomer header_search" style="top: 36px">
+        <div class="coutomer_li">
+            <form action="#">
+                <input type="search" id="search" results="5" class="search_input" placeholder="请输入客户姓名或手机号">
+            </form>
+        </div>
+    </div>
+    <ul id="kehu_list" class="gx_list_1 kehu_list os" style="position: fixed;top:81px; height: calc(100% - 81px);z-index: 122">
+    </ul>
+</div>
+
+<!--弹窗支付-->
+<div id="paycoverBack" class="pf cover none"></div>
+<div class="pay_alert_box y200 thd ts200" id="pay_alert_box">
+    <div class="pay_title">
+        <div class="pay_left_btn">&#xe697</div>
+        <span class="pay_title_cont">现金支付</span>
+        <div class="pay_right_btn">&#xe6a7</div>
+    </div>
+
+    <div class="pay_line paybg_f5">
+        <span>应&nbsp;付&nbsp;金&nbsp;额:</span>
+        <input type="number" readonly = 'readonly' id="yingfu">
+        <i class="hidden">&#xe6c1</i>
+    </div>
+
+
+    <div class="pay_line pay_val none">
+        <span>输&nbsp;入&nbsp;金&nbsp;额:</span>
+        <input type="number" id="shuru" placeholder="">
+        <i id="pay_shur">&#xe6c1</i>
+    </div>
+    <div class="pay_line pay_val none paybg_f5">
+        <span>预付款金额:</span>
+        <input type="number" id="yufukuan">
+        <i class="hidden" id="pay_yuf">&#xe6c1</i>
+        <div class="pay_tishi"></div><!--可用额度提示 max：1000-->
+    </div>
+    <div class="pay_line pay_val none">
+        <span>找&nbsp;零&nbsp;金&nbsp;额:</span>
+        <input type="number" id="zhaoling">
+        <i class="hidden">&#xe6c1</i>
+    </div>
+    <div class="pay_btn">
+        <span id="pay_true">确定</span>
+        <span id="pay_can">取消</span>
+    </div>
+</div>
+
+
+<div class="iosalert none">
+    <img src="" alt="" id="iosImg">
+</div>
+
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="../../public/frame/gbk.js"></script>
+<script type="text/javascript" src="js/bill.js"></script>
+<script type="text/javascript" src="js/storeSale.js"></script>
+<script type="text/javascript" src="js/pay.js"></script>
+<script type="text/javascript" src="js/bill_noend_dtl.js"></script>
+</body>
+</html>

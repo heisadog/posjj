@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/mine.css"/>
+    <link rel="stylesheet" type="text/css" href="../home/swiper/css/swiper.min.css">
+    <title>我的帐号</title>
+</head>
+<body>
+<header>
+    <div id="back" class="back">&#xe697</div>
+    <span>我的帐号</span>
+</header>
+
+<section class="pos_body" style="padding-top: 50px">
+    <ul class="cell_list_2">
+        <!--为了以后公用化，就多来一层div。承载图标，否则就用伪类设置图标了-->
+        <!--cell_list_2_none_icon 清除伪类的右键头-->
+        <!--<li class="cell_list_2_none_icon">
+            <div class="cell_list_2_icon">&#xe6af</div>
+            <span>昵称</span>
+            <div class="cell_list_2_cont">连接</div>
+        </li>-->
+        <!--<li class="cell_list_2_none_icon">
+            <div class="cell_list_2_icon" style="color: #dd6572">&#xe6c2</div>
+            <span>昵称</span>
+            <div class="cell_list_2_cont" id="nickname"></div>
+        </li>-->
+
+        <li class="cell_list_2_none_icon">
+            <div class="cell_list_2_icon" style="color: #efb336">&#xe6be</div>
+            <span>品牌</span>
+            <div class="cell_list_2_cont" id="brand"></div>
+        </li>
+
+        <li class="cell_list_2_none_icon">
+            <div class="cell_list_2_icon" style="color: #594d9c">&#xe6c3</div>
+            <span>操作帐号</span>
+            <div class="cell_list_2_cont" id="opertion"></div>
+        </li>
+
+        <li class="cell_list_2_none_icon">
+            <div class="cell_list_2_icon" style="color: #dd6572">&#xe6c2</div>
+            <span>岗位</span>
+            <div class="cell_list_2_cont" id="quarters"></div>
+        </li>
+
+        <li class="cell_list_2_none_icon">
+            <div class="cell_list_2_icon" style="color: #7dc5eb">&#xe6a1</div>
+            <span>店铺号</span>
+            <div class="cell_list_2_cont swiper-container" id="shopcode" style="width: 26%;"></div>
+        </li>
+
+        <li class="cell_list_2_none_icon">
+            <div class="cell_list_2_icon" style="color: #7cba59">&#xe62a</div>
+            <span>有效期至</span>
+            <div class="cell_list_2_cont" id="expirydate"></div>
+        </li>
+    </ul>
+</section>
+
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="../home/swiper/js/swiper.min.js"></script>
+<script type="text/javascript" src="js/accounts.js"></script>
+</body>
+</html>

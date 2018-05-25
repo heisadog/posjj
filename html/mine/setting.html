@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/mine.css"/>
+    <title>系统设置</title>
+</head>
+<body>
+<header>
+    <div id="backBtn" class="back">&#xe697</div>
+    <span>系统设置</span>
+</header>
+<section class="pos_body" style="padding-top:45px">
+    <ul class="cell_list_2">
+        <!--为了以后公用化，就多来一层div。承载图标，否则就用伪类设置图标了-->
+        <!--cell_list_2_none_icon 清除伪类的右键头-->
+        <li class="cell_list_2_none_icon">
+            <div class="cell_list_2_icon">&#xe67f</div>
+            <span>蓝牙连接</span>
+            <div class="cell_list_2_btn" id="bluetooth">连接</div>
+        </li>
+        <li data-url = "modify_pass" data-title="修改密码" data-type="密码">
+            <div class="cell_list_2_icon">&#xe69e</div>
+            <span>修改密码</span>
+            <!--<div class="cell_list_2_btn">连接</div>-->
+        </li>
+        <li data-url = "setting_print" data-title="销售抹零金额" data-type="抹零">
+            <div class="cell_list_2_icon">&#xe758</div>
+            <span>抹零金额</span>
+            <!--<div class="cell_list_2_btn">连接</div>-->
+        </li>
+        <li class="none" data-url = "setting_print" data-title="单据补录时间范围" data-type="补录">
+            <div class="cell_list_2_icon">&#xe6f1</div>
+            <span>补录范围</span>
+            <!--<div class="cell_list_2_btn">连接</div>-->
+        </li>
+        <li data-url = "setting_print" data-title="打印票据规格设置" data-type="打印">
+            <div class="cell_list_2_icon">&#xe621</div>
+            <span>打印设置</span>
+            <!--<div class="cell_list_2_btn">连接</div>-->
+        </li>
+    </ul>
+</section>
+
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="js/setting.js"></script>
+<script>
+    console.log(0 || '07')
+</script>
+</body>
+</html>

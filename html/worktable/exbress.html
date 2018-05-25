@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/worktable.css"/>
+    <title></title>
+</head>
+<body>
+<header>
+    <div id="backBtn" class="back">&#xe697</div>
+    <span>快递服务</span>
+</header>
+<ul class="form-from-to new-form-to">
+    <li class="from from-to" id="from">
+        <div class="placeholder" id="fromaddress">请输入寄件人地址</div>
+
+        <div class="content hide">
+            <span class="user left"></span>
+            <p class="address right"></p>
+        </div>
+        <a class="ico-pos">地址</a>
+    </li>
+    <li class="to from-to" id="to">
+        <div class="placeholder" id="toaddress">请输入收件人地址</div>
+        <div class="content hide">
+            <span class="user left"></span>
+            <p class="address right"></p>
+        </div>
+        <a class="ico-pos">地址</a>
+    </li>
+    <li class="goods from-to" id="goods">
+        <input class="placeholder" id="goods_name" placeholder="请输入物品名称" style="border: none;color: #000"/>
+        <a class="ico-pos">物品</a>
+    </li>
+    <li class="pays from-to" id="pay">
+        <input class="placeholder" readonly="readonly" id="goods_pay" placeholder="请选择付费方式" style="border: none;color: #000"/>
+        <a class="ico-pos">运费</a>
+    </li>
+    <li class="pickup-date click-right-arrow">
+        <span class="left">上门时间</span>
+        <p class="right">
+            <input readonly="readonly" id="makeDay" value="日期" style="width: 80px;">
+            <input readonly="readonly" class="deafshow" id="makeTime" value="时间段" style="width: 80px;">
+            <input readonly="readonly" class="none" id="makeTimes" value="时间段" style="width: 80px;">
+        </p>
+    </li>
+    <!--<li class="toDoorInfo hide">-->
+        <!--<ul>-->
+            <!--<li class="mui-switch-con">-->
+                <!--<ul>-->
+                    <!--<li>上门</li>-->
+                    <!--<li>自寄</li>-->
+                <!--</ul>-->
+                <!--<label><input class="mui-switch mui-switch-animbg" type="checkbox"></label>-->
+            <!--</li>-->
+            <!--<li class="grayLine"></li>-->
+            <!--<li class="pickup-date click-right-arrow hide">-->
+                <!--<p><span id="makeDay"></span><span id="selTime">一小时内</span>上门</p>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</li>-->
+
+</ul>
+<div class="bottom_position_btn" style="color:#01AAEF" id="save">
+    下  单
+</div>
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="js/exbress.js"></script>
+</body>
+</html>

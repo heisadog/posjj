@@ -1,0 +1,114 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/mine.css"/>
+</head>
+<style>
+    .radio{
+        margin-left: 5px;margin-right: 5px;width: auto;overflow: hidden;
+        margin-top: 5px;
+        background-color: #fff;border-radius:3px;
+    }
+    .radio li{
+        width: 100%;border-bottom: #d9d9d9 solid 1px;height: 40px;line-height: 40px;
+        text-indent: 10px;
+        position: relative;
+    }
+    .radio li:last-child{border-bottom: none}
+    .radio li::after{
+        position: absolute;width: 8px;height: 8px;
+        content: '';
+        right: 10px;top: 16px;
+        border-radius: 50%;
+        background-color: #d9d9d9;
+    }
+    .radio li::before{
+        position: absolute;width: 16px;height: 16px;
+        content: '';
+        right: 4px;top: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+        border:#d9d9d9 solid 2px;
+    }
+    .modles{
+        position: absolute;right: 0;top: 0;
+        padding: 0 8px;
+    }
+</style>
+<body class="">
+<header>
+    <div id="back" class="back">&#xe697</div>
+    <span id="title"></span>
+    <div class="modles" id="modles" style="width: 40px">保存</div>
+</header>
+<!--<ul class="radio">-->
+    <!--<li>57mm</li>-->
+    <!--<li>80mm</li>-->
+<!--</ul>-->
+<div class="coutomer_li" style="margin-top: 50px;background-color:#fff">
+    <input type="tel" id="num" class="search_input" placeholder="请输入打印张数">
+</div>
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script>
+    //window.location.href='http://www.wfy.com.cn/'
+    var setting =JSON.parse(localStorage.setting);
+    console.error(setting)
+    $('body').hammer().on('tap','#modles',function (event) {
+        event.stopPropagation();
+        var type = '';
+        var num = $('#num').val();
+        var reg = /^\d+$/;
+        if(!reg.test(num)){
+            wfy.alert('请设置有效的数字');
+            return;
+        }else {
+            if(setting.type =='打印') type = 'DYCS';
+            if(setting.type =='抹零') type = 'MLJE';
+            save(type,num)
+        }
+    });
+    getqx(function (res) {
+        console.log(res);
+        $('#title').html(setting.title);
+        localStorage.printFormatNum = res[0].cqxj_dycs;
+        localStorage.saleFormatNum = res[0].cqxj_mlje;
+        if(setting.type =='打印'){
+            $('#num').val(localStorage.printFormatNum || 1)
+        }
+        if(setting.type =='抹零'){
+            $('#num').val(localStorage.saleFormatNum || 10)
+        }
+    })
+
+var save = function (type,val) {
+    //AS_QXTYPE    -DYCS 打印次数维护  MLJE 抹零金额维护
+    //AS_QXVALUE   --参数值
+    var vBiz = new FYBusiness("biz.ctluser.qx.save");
+    var vOpr1 = vBiz.addCreateService("svc.ctluser.qx.save", false);
+    var vOpr1Data = vOpr1.addCreateData();
+    vOpr1Data.setValue("AS_USERID", LoginName);
+    vOpr1Data.setValue("AS_WLDM", DepartmentCode);
+    vOpr1Data.setValue("AS_FUNC", "svc.ctluser.qx.save");
+    vOpr1Data.setValue("AS_QXTYPE", type);
+    vOpr1Data.setValue("AS_QXVALUE", val);
+    var ip = new InvokeProc();
+    ip.addBusiness(vBiz);
+    console.error(JSON.stringify(ip));
+    ip.invoke(function(d){
+        if ((d.iswholeSuccess == "Y" || d.isAllBussSuccess == "Y")) {
+            // todo...
+            if(type == 'DYCS') localStorage.printFormatNum = val;
+            if(type == 'MLJE') localStorage.saleFormatNum = val;
+
+            Components.toast("操作成功");
+        } else {
+            // todo...[d.errorMessage]
+            wfy.alert(d.errorMessage)
+        }
+    }) ;
+}
+</script>
+</body>
+</html>

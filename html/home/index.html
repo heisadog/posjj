@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/home.css"/>
+    <link rel="stylesheet" type="text/css" href="swiper/css/swiper.min.css">
+    <title>首页</title>
+</head>
+<body style="background: #fff;">
+<header>
+    <span class="top_dv daosji none" id="storeName"></span>
+    <span id="headerName" class="none"></span>
+    <div class="headmissage">&#xe6e2</div>
+    <div id="header" class="none">
+        <em>&#xe6ac</em>
+        <input type="search" id="search_head" results="5" class="search_input_index" placeholder="搜索商品" readonly="readonly">
+    </div>
+
+</header>
+<!--首页-->
+<section class="main none">
+    <div id="main_top">
+        <div class="home_title">
+            <div class="title_price tapskip" data-page="qry_info">
+                <div class="titledv_tone">销售额（元）</div>
+                <div class="titledv_bottomone" id="saleNum" style="font-size: 28px;">--</div>
+            </div>
+            <div id="home_date">
+                <div class="date_top">客流<span class="passenger" id="passenger" style="padding-left: 3px;">0</span></div>
+                <div class="date_bottom">--</div>
+            </div>
+        </div>
+        <div class="home_title_num" style="height: 60px;">
+            <div class="title_dv tapskip" data-page="qry_stock">
+                <div class="titledv_top" style="font-size: 13px;">库存（件）</div>
+                <div class="titledv_bottom" id="stockCount" style="font-size: 28px;">--</div>
+                <div class="titledv_bottom none" id="stockshow" style="font-size: 12px;">--</div>
+            </div>
+            <div class="title_dv tapskip" data-page="qry_arrears">
+                <div class="titledv_top" style="font-size: 13px;">欠款（元）</div>
+                <div class="titledv_bottom" id="orderAll" style="font-size: 28px;">--</div>
+            </div>
+        </div>
+        <!--<div class="home_title_num">
+            <div class="title_dv">
+                <div class="titledv_top">库存（件）</div>
+                <div class="titledv_bottom" id="stockCount">&#45;&#45;</div>
+            </div>
+            <div class="title_dv fr title_dvr">
+                <div class="titledv_top">库存成本（元）</div>
+                <div class="titledv_bottom" id="stockPrice">&#45;&#45;</div>
+            </div>
+        </div>-->
+    </div>
+    <!--公告-->
+    <div class="notice_parent" id="tip">
+
+    </div>
+    <div style="width: 100%;height: 5px;background-color: #f5f5f5;"></div>
+
+    <div id="chartBox" class="week">
+        <div class="charttab">
+            <div class="charttab_btn charttab_btn_check">日畅销表</div>
+            <div class="charttab_btn">周畅销表</div>
+            <!--<div class="mui-switch-handle mui-inde-switch">日畅销表</div>-->
+        </div>
+        <!--<canvas id="chart_day" width="94%; "height="150" class=""></canvas>-->
+        <!--<canvas id="chart_week" width="94%" height="150" class="none"></canvas>-->
+    </div>
+    <!--底部四个按钮-->
+    <div class="footTable" id="footTable"></div>
+</section>
+
+<!--业务-->
+<section class="main none" style="">
+    <div class="tap_table" id="tap_table">
+        <div class="footTable_dv">
+            <div class="footTable_dvt">
+                <span>&#xe601</span>
+            </div>
+            <div class="footTable_dvb do_footTable_dvb">
+                添加功能
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--我的-->
+<section class="main none" style="background-color: #f2f2f2;">
+    <div class="cell_list_3" style="padding-bottom: 60px;">
+        <!--仿照微信 我的 列表模式-->
+        <div class="cell_list_3_head node_tap" data-url="accounts" id="userInfo">
+
+        </div>
+
+        <div class="cell_list_3_margin"></div>
+
+        <div class="cell_list_3_item node_tap cell_list_3_border_top" data-url="repair">
+            <div class="cell_list_3_icon" style="color: #594d9c">&#xe613</div>
+            <span>我的服务</span>
+        </div>
+        <!--<div class="cell_list_3_item node_tap none" data-url="wallet">-->
+            <!--<div class="cell_list_3_icon" style="color:rgb(234,129,24)">&#xe609</div>-->
+            <!--<span>我的钱包</span>-->
+        <!--</div>-->
+        <div class="cell_list_3_item node_tap none" data-url="qry_bill">
+            <div class="cell_list_3_icon" style="color: #d6204b">&#xe6c8</div>
+            <span>我的租金</span>
+        </div>
+        <div class="cell_list_3_item node_tap" data-url="tally">
+            <div class="cell_list_3_icon" style="color: #0e932e">&#xe6c8</div>
+            <span>我的账单</span>
+        </div>
+        <div class="cell_list_3_item node_tap" data-url="suggest">
+            <div class="cell_list_3_icon" style="color: #dd6572">&#xe65e</div>
+            <span>意见反馈</span>
+        </div>
+        <div class="cell_list_3_item node_tap" data-url="ServiceTracking">
+            <div class="cell_list_3_icon" style="color: #0e932e">&#xe647</div>
+            <span>服务跟踪</span>
+        </div>
+        <div class="cell_list_3_item node_tap" data-url="address">
+            <div class="cell_list_3_icon" style="color: #1296db">&#xe608</div>
+            <span>常用地址</span>
+        </div>
+
+        <div class="cell_list_3_margin"></div>
+        <div class="cell_list_3_item cell_list_3_border_top node_tap" data-url="setting">
+            <div class="cell_list_3_icon" style="color:rgb(81,81,81)">&#xe64e</div>
+            <span>系统设置</span>
+        </div>
+        <div class="cell_list_3_item node_tap" data-url="login">
+            <div class="cell_list_3_icon" style="color: #d81e06">&#xe615</div>
+            <span>退出登录</span>
+        </div>
+    </div>
+</section>
+
+<footer class="" style="background-color: rgb(255, 255, 255); color: rgb(102, 102, 102);">
+    <div data-url="home" class="footer_div main_color" style="width: 33.3333%;">
+        <div class="footer_icon_div"><i>&#xe778</i><p>首页</p></div>
+    </div>
+    <div data-url="worktable" class="footer_div" style="width: 33.3333%;">
+        <div class="footer_icon_div"><i>&#xe632</i><p>业务</p></div>
+    </div>
+    <div data-url="mine" class="footer_div" style="width: 33.3333%;">
+        <div class="footer_icon_div"><i>&#xe732</i><p>我的</p></div>
+    </div>
+</footer>
+
+<!--按钮弹窗-->
+<div class="tosttop thd y100 ts200" id="tosttop">
+    <div class="tost_can">
+        <div class="tost_cancel" id="tost_cancel"><!--&#xe630-->取消</div>
+        <div class="tost_true" id="tost_true"><!--&#xe6b1-->确定</div>
+    </div>
+    <div class="tosttop_cont thd ts200 os" id="tosttop_cont">
+        <!--<div class="tost_title">单据类</div>-->
+        <!--<ul class="tost_title_list">-->
+        <!--<li class="addcheck">出库单</li>-->
+        <!--<li>出库单</li>-->
+        <!--<li>出库单</li>-->
+        <!--</ul>-->
+    </div>
+</div>
+<!--门店弹出-->
+<div id="coverBack" class="pf cover none"></div>
+<div id="storeBox" class="selectBox thd y100 ts200 os"></div>
+
+<!--公告弹出-->
+<div id="noticewindow" class="selectBox thd y100 ts200" style="height:25%;width:90%;margin-left:5%;">
+    <div id="notice_content"></div>
+</div>
+
+<!--搜索 弹窗-->
+<div id="searchBox" class="searchBox y100 thd ts200 os">
+    <div class="coutomer header_search">
+        <div class="coutomer_li">
+            <form action="#">
+                <input type="search" id="search" results="5" class="search_input" placeholder="搜索">
+            </form>
+        </div>
+        <div class="header_search_right">&#xe718</div>
+    </div>
+    <div class="se_coum">
+        搜索记录
+        <span id="del_se_coum">&#xe69d</span>
+    </div>
+    <!--搜索历史记录-->
+    <ul class="se_hislo" id="se_hislo">
+        <!--<li>hha</li>-->
+    </ul>
+    <ul id="kehu_list" class="gx_list_1 kehu_list os none" style="position: fixed;top:48px; height: calc(100% - 48px);z-index: 1111">
+    </ul>
+</div>
+
+<!--搜索详细-->
+<div id="searchCont" class="searchBox x100 thd ts200 os">
+    <div id="sear_back" class="back" style="position: fixed;z-index: 2222">&#xe697</div>
+    <div id="seadtl" class="gx_list_1 kehu_list os" style="position: fixed;top:45px; height: calc(100% - 45px);z-index: 1112">
+
+    </div>
+</div>
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="../../public/frame/chart.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/worktable.css"/>
+    <title></title>
+</head>
+<body style="background-color: #fff">
+<header>
+    <div id="back" class="back">&#xe697</div>
+    <span>员工考勤</span>
+</header>
+<div style="padding-top: 50px">
+
+    <div class="sign_head">
+        <div class="head_left">
+            <div class="portrait" id="portrait"></div>
+            <div class="left_right">
+                <p id="sign_name"></p>
+                <p id="sign_style"><span id="sign_depart"></span></p>
+            </div>
+        </div>
+        <input id="sign_time" value="--.--.--" readonly="readonly"/>
+    </div>
+
+    <div class="mid_sign">
+        <p class="sign_title">坚持是世上最难的事，也是最简单的事。</p>
+        <div id="sign_go">
+            <p id="signgo_title">上班</p>
+
+            <div id="registration" class="main_bgcolor block">
+                <div class="reg_mid">
+                    <p class="signgo_content">上班签到</p>
+                    <p class="signgo_time" id="signgo_time">--:--:--</p>
+                </div>
+            </div>
+
+            <p id="signgo_foot">您现在的所在位置：<span id="signgo_adrs">---</span></p>
+            <p id="go_address" class="none">---</p>
+            <p id="go_pun" class="none main_bgcolor">正常</p>
+        </div>
+        <div id="sign_back">
+            <p id="signback_title">下班</p>
+
+            <div id="backration" class="main_bgcolor none">
+                <div class="reg_mid">
+                    <p class="signgo_content">下班签到</p>
+                    <p class="signgo_time" id="signback_time">--:--:--</p>
+                </div>
+            </div>
+
+            <p id="signback_foot" class="none">您现在的所在位置：<span id="signback_adrs">---</span></p>
+            <p id="back_address" class="none">---</p>
+            <p id="back_pun" class="none main_bgcolor">正常</p>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="js/Attendance.js"></script>
+</body>
+</html>

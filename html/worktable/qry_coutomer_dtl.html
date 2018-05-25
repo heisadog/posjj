@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/bill.css"/>
+    <title>客户信息</title>
+</head>
+<body>
+<header>
+    <div id="backs" class="back">&#xe697</div>
+    <span>客户信息</span>
+    <div id="add" class="head_add_btn" style="font-size:16px;width: 60px" data-type="revise">修改</div>
+</header>
+<div class="bill_basic" style="padding-top:48px;">
+    <ul class="bill_head_cont yiba" id="headlist">
+        <li><span>客&nbsp;户&nbsp;姓&nbsp;名：</span>
+            <input class="createTime"  readonly="true"  id="vipname" placeholder="请修改姓名" data-type="word">
+            <div class="comboadd removcom none">&#xe651</div>
+        </li>
+        <li><span>手&nbsp;机&nbsp;号&nbsp;码：</span>
+            <input class="createTime"  readonly="true"  id="vipMobile" placeholder="请修改联系方式" data-type="word">
+            <div  class="comboadd removcom none">&#xe651</div>
+        </li>
+        <li id="vipsex"><span>客&nbsp;户&nbsp;性&nbsp;别：</span>
+            <input class="createTime" readonly="true"  placeholder="请修改性别" data-type="select">
+            <input class="createTime none" readonly="true" id="xb" placeholder="请修改性别" data-type="select_show">
+            <div class="comboadd jq_xb none">&#xe77a</div>
+        </li>
+        <li id="vipBrithday"><span>出&nbsp;生&nbsp;年&nbsp;月：</span>
+            <input class="createTime" readonly="true" value=""  placeholder="请修改出生日期" data-type="select">
+            <input class="createTime none" readonly="true" value="" id="bri" placeholder="请修改出生日期" data-type="select_show">
+            <div class="comboadd jq_bri none">&#xe77a</div>
+        </li>
+        <li><span>微&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;信：</span>
+            <input class="createTime" readonly="true" id="wechat" placeholder="请修改微信信息" data-type="word">
+            <div class="comboadd removcom none">&#xe651</div>
+        </li>
+        <li id="area"><span>区&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;域：</span>
+            <input class="createTime" readonly="true" placeholder="请选择区域" data-type="select">
+            <input class="createTime none" readonly="true" id="areas" placeholder="请选择区域" data-type="select_show">
+            <div class="comboadd jq_qy none">&#xe77a</div>
+        </li>
+        <li><span>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：</span>
+            <input class="createTime" readonly="true" id="vipAddress" placeholder="请输入详细地址" data-type="word">
+            <div class="comboadd removcom none">&#xe651</div>
+        </li>
+        <li><span>备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：</span>
+            <input class="createTime" readonly="true" id="vipbz" placeholder="请修改备注" data-type="word">
+            <div class="comboadd removcom none">&#xe651</div>
+        </li>
+        <li><span >授&nbsp;信&nbsp;额&nbsp;度：</span>
+            <input class="createTime" readonly="true" id="viped" type="tel" placeholder="请修改授信额度" data-type="word">
+            <div class="comboadd removcom none">&#xe651</div>
+        </li>
+    </ul>
+
+    <!--图片-->
+    <!--<div class="bill_part_head">
+        <span>图片</span>
+        <div class="bill_part_slubtn"><i>&#xe6a6</i></div>
+    </div>
+    <div class="bill_sku_box" id="bill_sku_box"></div>-->
+</div>
+
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="../../public/frame/city-picker.js"></script>
+<script type="text/javascript" src="js/qry_coutomer_dtl.js"></script>
+</body>
+</html>

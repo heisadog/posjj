@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/worktable.css"/>
+    <link rel="stylesheet" href="css/bill.css">
+    <title></title>
+</head>
+<body>
+<header>
+    <div id="backBtn" class="back">&#xe697</div>
+    <span id="pagename">快递服务</span>
+    <div class="modles" id="modles" style="right: 50px">&#xe6ac</div>
+    <div id="add" class="head_add_btn">&#xe6b9</div>
+</header>
+
+<section class="view_box" style="height: 100%;">
+
+    <div class="wfyContList" style="height: calc(100% - 45px);height: -webkit-calc(100% - 45px)">
+        <div id="cont">
+            <div id="searlist" class=""></div>
+            <div class="wfyContList" id="wfyContList" style="height: calc(100% - 40px);height: -webkit-calc(100% - 40px);">
+
+            <!--<div class="list_1 list_swiper" style="height:120px">-->
+                <!--<div class="list_item_1 thd ts200">-->
+                    <!--<div class="item_line">-->
+                        <!--<span class="">操作员：<span>刘某</span></span>-->
+                        <!--<span class="fr">单号：<span>002120411</span></span>-->
+                    <!--</div>-->
+                    <!--<div class="item_line">-->
+                        <!--<span class="">寄：<span>2222</span></span>-->
+                    <!--</div>-->
+                    <!--<div class="item_line">-->
+                        <!--<span class="">收：<span>成都店</span></span>-->
+                    <!--</div>-->
+                    <!--<div class="item_line">-->
+                        <!--<span class="">日期：<span>2222</span></span>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="list_drap">-->
+                    <!--<div class="list_item_btn">删除</div>-->
+                <!--</div>&lt;!&ndash;<span>删除</span>&ndash;&gt;-->
+            <!--</div>-->
+            </div>
+            <div class="scrollload none" id="scrollload">
+                <div class="scrollload_img"></div>
+                <span>正在加载</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<div id="cover" class="pf cover none" style="z-index: 33"></div>
+<div id="search" class="selectTopBox thd y_100 ts200 os">
+    <div style="width: 100%;height: 50px"></div>
+    <ul class="topSearchBox">
+        <li class="nobor">
+            <span>运单号</span>
+            <input type="text" id="ks" placeholder="请输入运单号">
+            <div class="delethis">&#xe69a</div>
+        </li>
+        <div class="topSearchBtn">
+            <span id="clear">清 除</span>
+            <span id="searbtn">查 询</span>
+        </div>
+    </ul>
+</div>
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="js/exbressList.js"></script>
+</body>
+</html>

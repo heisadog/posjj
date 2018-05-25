@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/worktable.css"/>
+    <title></title>
+</head>
+<body>
+<header>
+    <div id="back" class="back">&#xe697</div>
+    <span>客户欠款</span>
+    <div class="modles" id="modles" style="width: 40px">&#xe6ac</div>
+</header>
+<section class="view_box" style="height: calc(100% - 50px);
+    height: -webkit-calc(100% - 50px);">
+    <ul class="sale_head" id="stock_head">
+        <li data-type="Arrears" class="sale_che" style="width: 50%;">客户欠款</li>
+        <li data-type="Flow" style="width: 50%;">交易流水</li>
+    </ul>
+    <div class="tave" id="tablehead"></div>
+    <!--<ul class="stock_head" id="cale_tab">-->
+    <!--<li>店员</li>-->
+    <!--<li>数量</li>-->
+    <!--<li>业绩</li>-->
+    <!--<li>贡献率</li>-->
+    <!--</ul>-->
+    <div class="wfyContList" style="height: calc(100% - 130px);height: -webkit-calc(100% - 130px)">
+        <div id="cont">
+            <div id="searlist" class="">
+
+            </div>
+            <div id="canvasDiv" class="none"></div>
+            <div class="scrollload none" id="scrollload">
+                <div class="scrollload_img"></div>
+                <span>正在加载更多内容</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="bottom_position_btn">
+    <p class="btncont" style="width: 100%;">合计：<span id="total_money">0</span></p>
+</div>
+<div id="cover" class="pf cover none" style="z-index: 33"></div>
+<div id="search" class="selectTopBox thd y_100 ts200 os">
+    <div style="width: 100%;height: 50px"></div>
+    <ul class="topSearchBox">
+
+        <li>
+            <span>客户</span>
+            <input type="text" id="customer" placeholder="请输入客户名称">
+            <div class="delethis">&#xe69a</div>
+        </li>
+        <li class="jq_time">
+            <span>开始日期</span>
+            <input type="text" id="startdate" readonly="readonly" placeholder="开始日期">
+        </li>
+        <li class="nobor jq_time">
+            <span>截止日期</span>
+            <input type="text" id="enddate" readonly="readonly" placeholder="截止日期">
+        </li>
+        <div class="topSearchBtn">
+            <span id="clear">清 除</span>
+            <span id="searbtn">查 询</span>
+        </div>
+    </ul>
+</div>
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="js/qry_arrears.js"></script>
+</body>
+</html>

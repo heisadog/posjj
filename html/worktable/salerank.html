@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/worktable.css"/>
+    <title></title>
+</head>
+<body>
+<header>
+    <div id="back" class="back">&#xe697</div>
+    <span>销售榜</span>
+    <div class="modles" id="modles">&#xe6ac</div>
+</header>
+
+<section class="view_box" style="height: calc(100% - 30px);
+    height: -webkit-calc(100% - 30px);">
+    <ul class="stock_head" id="stock_head">
+        <li style="width: 25%;float: right;" id="unsale" data-code="unsale" data-sort ='DESC' data-field="1"><span>滞<i style="visibility: hidden">↓</i>销 <i>↓</i></span></li>
+        <li style="width: 25%;float: right;" id="sale" data-code="sale" data-sort ='DESC' data-field="0"><span class="check">销<i style="visibility: hidden">↓</i>售 <i>↓</i></span></li>
+    </ul>
+    <div class="wfyContList" style="height: calc(100% - 40px);height: -webkit-calc(100% - 40px);">
+        <div id="cont">
+            <div id="searlist"></div>
+
+            <div class="scrollload none" id="scrollload">
+                <div class="scrollload_img"></div>
+                <span>正在加载</span>
+            </div>
+        </div>
+        <i style="visibility: hidden">...</i>
+    </div>
+</section>
+
+<div id="cover" class="pf cover none" style="z-index: 33"></div>
+<div id="search" class="selectTopBox thd y_100 ts200 os">
+    <div style="width: 100%;height: 50px"></div>
+    <ul class="topSearchBox">
+        <li>
+            <span>款号</span>
+            <input type="text" id="girard" placeholder="请输入款号">
+            <div class="delethis">&#xe69a</div>
+        </li>
+        <li>
+            <span>名称</span>
+            <input type="text" id="name" placeholder="请输入名称">
+            <div class="delethis">&#xe69a</div>
+        </li>
+        <li>
+            <span>门店</span>
+            <input type="text" id="shop" readonly="readonly" placeholder="请输入门店">
+            <div class="delethis">&#xe69a</div>
+        </li>
+        <li>
+            <span>开始日期</span>
+            <input type="text" id="begintime" readonly="readonly" placeholder="开始日期">
+            <div class="delethis">&#xe69a</div>
+        </li>
+        <li class="nobor">
+            <span>截止日期</span>
+            <input type="text" id="endtime" readonly="readonly" placeholder="截止日期">
+            <!--<div class="delethis">&#xe69a</div>-->
+        </li>
+        <div class="topSearchBtn">
+            <span id="clear">清 除</span>
+            <span id="searbtn">查 询</span>
+        </div>
+    </ul>
+</div>
+
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="js/salerank.js"></script>
+</body>
+</html>

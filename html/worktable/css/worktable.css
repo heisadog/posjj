@@ -1,0 +1,942 @@
+.coutomer_li{
+    width:calc(100% - 52px);
+    width: -webkit-calc(100% - 52px);
+    float: left;
+    height: 48px;
+    margin-left: 12px;
+}
+/**库存查询**/
+.modles{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height:45px;
+    line-height: 45px;
+    font-family: 'wfyfont';
+    font-size:18px;
+}
+
+/*表头*/
+.stock_head,.stock_head_sell,.sale_head{
+    width: 100%;
+    height: 40px;
+    border-bottom: #d9d9d9 solid 1px;
+    background-color: #fff;
+    line-height: 40px;
+    overflow: hidden;
+}
+.sale_head{
+    border-bottom: none;
+}
+.stock_head li,.stock_cont li{
+    float: left;
+    width: 20%;
+    color: #999;
+}
+
+.stock_head li:first-child,.stock_cont li:first-child{
+    width: 40%;
+    text-indent: 12px;
+}
+.stock_head li:first-child{
+    width: 20%;
+    text-indent: 12px;
+}
+.stock_head li:nth-child(2){
+    width: 40%;
+    text-indent: 12px;
+}
+.stock_head li span{
+    display: block;
+    width: 90%;
+    height: 26px;
+    /*border: #999 solid 1px;*/
+    background-color: #d9d9d9;
+    border-radius: 26px;
+    line-height: 26px;
+    text-align: center;
+    margin-top: 7px;
+    font-size:14px;
+    color: #333;
+}
+.stock_head li span.check{
+    /*border: #01AAEF solid 1px;*/
+    background-color: #d9d9d9;
+    color: #01AAEF;
+}
+.sale_head li{
+    float: left;
+    width: 25%;height: 39px;
+    color: #000;
+    font-size:15px;
+    font-weight: 900;
+    text-align: center;
+    border-bottom: #d9d9d9 solid 1px;
+}
+.sale_head li.sale_che{
+    color: #01AAEF;
+    border-bottom: #01AAEF solid 1px;
+}
+.stock_head_sell li {
+    width: 25%;
+    float: left;
+    color: #000;
+    font-size:12px;
+    text-align: left;
+    overflow: hidden;
+}
+.stock_cont{
+    height: 60px;
+}
+.stock_cont li{
+    height: 60px;
+    line-height: 60px;
+}
+/*考勤打卡*/
+.sign_head {
+    height: 50px;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+.head_left {
+    margin-left: 10px;
+    margin-right: 0%;
+    width: auto;
+    height: 50px;
+}
+.mid_sign {
+
+}
+.sign_title {
+    height: 50px;
+    width: 100%;
+    color: #c1c1c1;
+    text-indent: 10px;
+    line-height: 50px;
+}
+.portrait {
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    float: left;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 100%;
+    margin-right: 3px;
+    background-color: #f2725e;
+}
+
+.left_right {
+    height: 50px;
+    width: 80%;
+    float: left;
+}
+
+#sign_name {
+    height: 25px;
+    width: 100%;
+    line-height: 25px;
+    text-align: left;
+    color: #000;
+    font-weight: bolder;
+}
+
+#sign_style {
+    height: 25px;
+    width: 100%;
+    line-height: 25px;
+    text-align: left;
+    color: #c1c1c1;
+}
+
+#sign_time {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    height: 30px;
+    width: 80px;
+    text-indent: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #e9f1ff;
+    color: #4c8dfa;
+}
+
+.trianglet {
+    position: absolute;
+    top: 31px;
+    right: 24px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #4c8dfa;
+}
+
+
+
+#sign_go {
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    border-left: 1px solid #C1C1C1;
+}
+#signgo_title,#go_address,#go_pun,#signback_title,#back_address,#back_pun{
+    height: 30px;
+    width: auto;
+    line-height: 30px;
+    padding-left: 10px;
+}
+#signback_title,#signgo_title{
+    color: #000;
+}
+#back_address,#go_address{
+    color: #ACACAC;
+}
+#back_pun,#go_pun{
+    border-radius: 15px;
+    width: 50px;
+    margin-left: 10px;
+    color: #fff;
+}
+#registration,#backration{
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    line-height: 100px;
+    margin: 20px auto;
+    border-radius: 100%;
+    position: relative;
+}
+#signgo_foot{
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    line-height: 30px;
+}
+.location{
+    color: #5e97f6;
+}
+#signback_foot{
+    text-align: center;
+    width: 100%;
+    height: 30px;
+}
+.reg_mid{
+    height: 60px;
+    width: 80px;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+.signgo_content{
+    height: 30px;
+    width: 80px;
+    line-height: 30px;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 16px;
+}
+.signgo_time{
+    height: 30px;
+    width: 80px;
+    line-height: 30px;
+    color: #fff;
+}
+#sign_back {
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    margin-top: 10px;
+    border-left: 1px solid #C1C1C1;
+    background-color: #f1f7ff;
+}
+
+.pun{
+    background-color: #ff8345;
+}
+
+
+.dsdsarig{
+    float: right;
+    width: 75%;
+}
+
+.pos_item_dtl_img{
+    float: left;
+    width: calc(25% - 10px);
+    width: -webkit-calc(25% - 10px);
+    margin-left: 10px;
+    height: 100%;
+    max-height: 120px;
+    background-color: #fff;
+}
+.pos_item_dtl_img img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 80px;
+}
+
+.pos_list {
+    padding: 5px 10px;
+    height: 90px;
+    background-color: #fff;
+    position: relative;
+    margin-top: 5px;
+}
+
+
+/***未结订单***/
+#beizhu_delete,
+#cardid_delete,
+#password_delete,
+#phone_delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    text-align: center;
+}
+
+#discount_delete {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    text-align: center;
+}
+
+.beizhu_del {
+    font-size: 26px;
+    line-height: 24px;
+}
+
+.top_add {
+    color: #fff;
+    font-size: 26px;
+    line-height: 26px;
+    margin-right: 10px;
+}
+
+.top_right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.foot_sp {
+    margin-left: 15px;
+}
+
+.border {
+    border: none;
+}
+
+.listbgcor {
+    background-color: #F1F1F1;
+}
+
+.foot_left {
+    line-height: 60px
+}
+
+.foot_right {
+    line-height: 57px
+}
+
+.foot_icon {
+    font-size: 22px;
+    margin-right: 15px;
+}
+
+.guide_sp {
+    display: inline-block;
+    height: 100%;
+    width: 30%;
+    margin-right: 10%
+}
+
+.guide_ipt {
+    border: 1px solid #fff;
+    width: 20%;
+    height: 20px;
+}
+
+.guide_ra {
+    -webkit-appearance: radio;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    top: 13px;
+}
+.postyleicon{
+    position: absolute;
+    right: 10px;
+    top: -3px;
+}
+.postylesp{
+    position: absolute;
+    right: 19px;
+    top: 10px;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+.order_ipt{
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding:0 5px;
+    float: right;
+    margin-left: 10px;
+    border-radius: 10px;
+    color: #000;
+    width: 85px;
+    text-align: center;
+}
+.oder_again{
+    border: 1px solid rgba(164,29,18,1);
+    color: rgba(164,29,18,1);
+}
+.payScanDv{
+    position: relative;
+}
+#poppay .scanner{
+    font-family: "wfyfont";
+    position: absolute;
+    right: 10px;
+    top: -5px;
+    font-size: 24px;
+}
+#mid{
+    position: fixed;
+    top: 50px;
+    bottom: 67px;
+    left: 0;
+    right: 0;
+    overflow-y: scroll;
+}
+.orderList .item{
+    margin-bottom: 5px;
+}
+/*------------------  posale_cash --------------------*/
+
+#cash_ipt {
+    width: 80%;
+    height: 40px;
+    margin-left: 10%;
+    margin-top: 5%;
+    font-size: 24px;
+    border: 1px solid #ACACAC;
+    text-align: center;
+}
+
+
+/*-------------------  possale_chit  -----*/
+
+.pub_earchBoxT {
+    width: -webkit-calc(83% - 20px);
+    margin-left: 10px;
+    float: left;
+}
+
+#chit_check {
+    float: right;
+    width: 15%;
+    height: 36px;
+    border: 1px solid #AAAAAA;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.chit_lit {
+    height: 80px;
+    width: 100%;
+    margin-bottom: 5px;
+    background-color: #fff;
+}
+
+.chit_pt,.chit_pb{
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+
+
+
+.chitjesp {
+    text-align: right;
+    margin-right: 20px;
+}
+.petjesp{
+    text-align: right;
+}
+
+/*-------------  possale_petcard*/
+
+.petcard_ipt {
+    border: none;
+    width: 80px;
+    height: 30px;
+    border: 1px solid #CCCCCC;
+    text-align: center;
+}
+
+.chit_ptspr {
+    text-align: right;
+}
+.chitje{
+    display: inline-block;
+    width: 82px;
+    text-align: center;
+}
+/*-------   possale_integral   -----*/
+
+.gral_top{
+    height: 50px;
+    width: 100%;
+    padding: 5px 10px;
+    line-height: 50px;
+    font-size: 16px;
+    background-color: #fff;
+}
+.gral_title{
+    height: 30px;
+    width: 100%;
+    padding: 5px 10px;
+    background-color: #CCCCCC;
+    line-height: 30px;
+    font-size: 14px;
+}
+.grlist_tp,.grlist_mp,.grlist_bp{
+    height: 30px;
+    width: 94%;
+    padding: 0 3%;
+    line-height: 30px;
+}
+.grlist_mp{
+    text-align: left;
+}
+.gral_ipt{
+    height: 25px;
+    width: 80px;
+    border: 1px solid #ccc;
+}
+.gral_list{
+    background-color: #fff;
+    margin-bottom: 5px;
+}
+
+/*-------   支付宝   ----------------*/
+.ali_title{
+    height: 30px;
+    width: 100%;
+    padding: 5px 10px;
+    line-height: 30px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #000;
+}
+
+
+/*--  possale_body  ---*/
+
+.list_top {
+    height: 30px;
+    line-height: 30px;
+}
+.list_bot {
+    height: 85px;
+}
+
+.list_left {
+    height: 85px;
+    width: 25%;
+    float: left;
+    display: block;
+}
+
+.list_right {
+    height: 85px;
+    width: 75%;
+    float: right;
+    display: block;
+}
+
+.right_item {
+    width: 100%;
+    height: 33%;
+    display: block;
+    line-height: 27px;
+}
+
+.bodyCount {
+    margin-top: -7px;
+}
+
+#seach_add {
+    height: 36px;
+    width: calc(100% - 20px);
+    width: -webkit-calc(100% - 20px);
+    margin: 5px auto;
+}
+
+.send_store {
+    height: 36px;
+    width: 95%;
+    text-indent: 12px;
+}
+
+#order_discount {
+    width: 100%;
+    height: 36px;
+    text-indent: 12px;
+}
+
+.trianglet {
+    right: 21px;
+    top: 14px;
+}
+
+#seach_add .seach_add {
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: relative;
+    border-radius: 5px;
+}
+
+#seach_add .seach_add input {
+    border-radius: 5px;
+}
+
+.sale_cause {
+    display: block;
+    width: 48%;
+    float: left;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.sale_zk {
+    width: 48%;
+    float: right;
+    display: block;
+    background-color: #eee;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+}
+
+.sale_season {
+    margin-left: 15%;
+}
+
+.sale_cxyy {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #666;
+}
+
+.product_img {
+    height: 80%;
+    width: 80%;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+#aliFoot{
+    border-top: 1px solid #ccc;
+}
+
+/*-- possale_detail ---*/
+
+#count {
+    left: auto;
+    left: 125px;
+    right: auto;
+    margin-top: 6px;
+}
+
+
+/*--------  possale_cashier  ------------*/
+
+.cashier_top {
+    height: 100px;
+    padding: 5px 10px;
+    background-color: #fff;
+}
+
+.cabot_bot {
+    margin-top: 2px;
+}
+
+.cashier_mid {
+    height: 100px;
+    padding: 5px 10px;
+    background-color: #E4E4E4;
+    padding-bottom: 0px;
+}
+
+.title {
+    height: 30px;
+    line-height: 30px;
+}
+
+.price {
+    height: 70px;
+    line-height: 70px;
+    font-size: 34px;
+    text-align: center;
+}
+
+.cashier_bot {
+    height: 220px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.cabot_dv {
+    position: relative;
+    height: 120px;
+    width: 33%;
+    background-color: red;
+    float: left;
+    text-align: center;
+    color: #fff;
+}
+.cashier_pay{
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+}
+.move {
+    margin-left: 0.5%;
+}
+
+.cabot_dv .wfyfont {
+    font-family: wfyfont;
+    height: 60px;
+    width: 60px;
+    margin: 4px auto;
+    font-size: 34px;
+    background-color: #fff;
+    border-radius: 50%;
+    line-height: 33px;
+    color: #d5183c;
+    margin-top: 10px;
+}
+
+.cabot_dv .wfyfontadd {
+    font-family: wfyfontadd;
+    height: 60px;
+    width: 60px;
+    margin: 4px auto;
+    font-size: 34px;
+    background-color: #fff;
+    border-radius: 50%;
+    line-height: 56px;
+    color: #d5183c;
+    margin-top: 10px;
+}
+#postyle .wfyfontadd {
+    font-family: wfyfontadd;
+    font-size: 22px;
+}
+#postyle #alistic{
+    font-size: 18px;
+}
+.tencentpay_title,.alipay_title{
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#postyleConfirm{
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 15px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.pos_dtl_foot{
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;left: 0;
+    background-color: #f8f8f8;
+    padding-bottom: 56px;
+    z-index: 1;
+    border-top: 1px solid #D9D9D9;
+}
+/**/
+.sdsdf{
+    position: absolute;
+    right: 40px;
+    top: 0;
+    width: 40px;
+    height: 45px;
+    text-align: center;
+    font-size:20px;
+    font-family: 'wfyfont';
+}
+.color_red{
+    color: #FE2C2C;
+}
+
+/*快递*/
+.form-from-to {
+    padding-top: 45px;
+    background: rgba(255, 255, 255, 0.95);
+}
+.form-from-to li {
+    padding: 12px 12px 12px 42px;
+    border-bottom: 1px solid #dadada;
+    line-height: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.form-from-to .from:before {
+    content: "寄";
+    background: #000;
+}
+.form-from-to li:before {
+    position: absolute;
+    width:18px;
+    height: 18px;
+    top: 50%;
+    left: 12px;
+    margin-top: -10px;
+    text-align: center;
+    line-height: 18px;
+    font-size: 12px;
+    color: #fff;
+    -webkit-border-radius:18px;
+    -moz-border-radius: 18px;
+    border-radius:18px;
+}
+.form-from-to li .placeholder {
+    color: #a7abae;
+    border-right: 1px solid #dadada;
+    margin-right: 60px;
+}
+.form-from-to li .ico-pos {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 14px;
+    color: #dc1e32;
+    padding: 0 14px;
+    line-height:42px;
+}
+.form-from-to .to:before {
+    content: "收";
+    background: #db1e32;
+}
+.form-from-to .goods::before {
+    content: "货";
+    background: rgb(219, 30, 50);
+}
+.form-from-to .pays:before {
+    content: "费";
+    background: #db1e32;
+}
+.form-from-to li.click-right-arrow {
+    padding-right: 25px;
+}
+.form-from-to .pickup-date::before {
+    position: absolute;
+    width: 14px;
+    height:14px;
+    top: 50%;
+    left: 14px;
+    margin-top: -9.6px;
+    text-align: center;
+    line-height: 18px;
+    content: "\e6bb";
+    font-family: 'wfyfont';
+    font-size:16px;
+    color: #1a1a1a;
+}
+.form-from-to li .left {
+    display: block;
+    width: 28.99%;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.left {
+    float: left;
+}
+.new-form-to li.pickup-date .right {
+    text-align: right;
+    width: 70%;
+    float: right;
+}
+.form-from-to li .right {
+    color: #5a5a5a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.click-right-arrow:after {
+    content: "";
+    position: absolute;
+    right: 16px;
+    width: 9.6px;
+    height: 9.6px;
+    top: 52%;
+    border-top: 1.2px solid #888;
+    border-left: 1.2px solid #888;
+    margin-top: -7.2px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/worktable.css"/>
+    <link rel="stylesheet" href="css/bill.css">
+    <link rel="stylesheet" type="text/css" href="../home/css/home.css"/>
+    <title></title>
+</head>
+<body>
+<header>
+    <div id="back" class="back">&#xe697</div>
+    <span id="pagename">货品管理</span>
+    <div id="pro_save" class="head_add_btn" style="font-size:16px;width: 60px;">保存</div>
+</header>
+<div class="bill_basic" style="padding-top:48px">
+    <ul class="bill_head_cont thd ts200" id="headlist">
+        <li><span  class="mus">款号</span>
+            <input class="createTime"  readonly="true"  id="girard" name="girard" placeholder="请输入款号" data-code="">
+        </li>
+        <li><span  class="mus">名称</span>
+            <input class="createTime"  readonly="true"  id="name" name="name" placeholder="请输入名称" data-code="">
+        </li>
+        <li class="none"><span >物品代码</span>
+            <input class="createTime"  readonly="true" id="productcode" name="productcode" data-code="">
+        </li>
+        <li><span>颜色</span>
+            <input class="createTime" readonly="true" id="color" name="color" placeholder="默认为均色" data-group="" data-code="">
+            <div style="float:right;" class="comboadd">&#xe6b9;</div>
+        </li>
+        <li><span>尺码</span>
+            <input class="createTime" readonly="true" id="size" name="size" placeholder="默认为均码" data-group="" data-code="">
+            <div style="float:right;" class="comboadd">&#xe6b9;</div>
+        </li>
+        <li id="inprice"><span class="mus">进价</span>
+            <input class="createTime" type="number" title="请输入字母" readonly="true" id="price" name="price" placeholder="请输入进价" data-code="" >
+        </li>
+        <li><span class="mus">批发价</span>
+            <input class="createTime" type="number" readonly="true" id="wholesalePrice" name="price" placeholder="请设置批发价" data-code="" >
+        </li>
+        <li><span class="mus">零售价</span>
+            <input class="createTime" type="number" readonly="true" id="saleprice" name="saleprice" placeholder="请设置零售价" data-code="">
+        </li>
+        <li><span class="">库存数</span>
+            <input class="createTime" type="number" readonly="true" id="storeNum" name="saleprice" placeholder="请设置库存数" data-code="">
+        </li>
+        <li><span>品牌</span>
+            <input class="createTime" readonly="true" id="brand" name="brand" placeholder="请选择品牌" data-code="">
+            <div style="float:right;" class="comboadd">&#xe6b9;</div>
+        </li>
+        <li><span>厂商</span>
+            <input class="createTime" readonly="true" id="company" name="company" placeholder="请选择厂商" data-code="">
+        </li>
+        <li><span>季节</span>
+            <input class="createTime" readonly="true" id="season" name="season" placeholder="请选择季节" data-code="">
+        </li>
+        <li><span>类别</span>
+            <input class="createTime" readonly="true" id="category" name="category" placeholder="请选择类别" data-code="">
+            <div style="float:right;" class="comboadd">&#xe6b9;</div>
+        </li>
+        <li><span>计量单位</span>
+            <input class="createTime" readonly="true" id="unit" placeholder="请选择计量单位" data-code="">
+        </li>
+    </ul>
+
+    <!--图片-->
+    <!--<div class="bill_part_head">
+        <span>图片</span>
+        <div class="bill_part_slubtn"><i>&#xe6a6</i></div>
+    </div>
+
+    <div class="bill_sku_box" id="bill_sku_box"></div>-->
+</div>
+
+
+<!--下拉数据-->
+<div id="coverBack" class="pf cover none"></div>
+<div id="multi_box" class="selectBox thd y100 ts200 os" style="height:20%;z-index: 999"></div>
+
+<!--新增 弹窗-->
+<div id="addwindow" class="selectBox thd y100 ts200" style="height:200px;" data-type="">
+    <div class="tencentpay_title"><span id="window_title"></span></div>
+    <div id="code_div" class="pr item nothing">
+        <span class="w110" id="field_code_title"></span>
+        <input type="text" id="field_code" class="select" placeholder="请输入代码"/>
+    </div>
+    <div id="name_div" class="pr item">
+        <span class="w110" id="field_name_title"></span>
+        <input type="text" id="field_name" class="select" placeholder="请输入名称"/>
+    </div>
+
+    <div class="bgwhite thd ts200">
+        <a id="btn_sure" class="fl w50 main_color border foot_left"><span class="foot_sp">确认</span></a>
+        <a id="btn_cancel" class="fl w50 bl1 main_color border foot_right"><span class="foot_sp">取消</span></a>
+    </div>
+</div>
+
+<!--颜色\尺码弹窗选择-->
+<div class="tosttop thd y100 ts200" id="tosttop">
+    <div class="tost_can">
+        <div class="tost_cancel" id="tost_cancel">取消</div>
+        <div class="tost_true" id="tost_true">确定</div>
+    </div>
+    <div class="wfyContList" style="height: calc(100% - 40px);height: -webkit-calc(100% - 40px)">
+        <div class="cont">
+            <div id="tosttop_cont">
+                <dl class="addstorenum">
+                    <dt>
+                        <span class="addstorenum_name">红色</span>
+                    <div class="addstorenum_n"><em>&#xe66a</em><input type="tel"><em>&#xe6b9</em></div>
+                    </dt>
+                    <dd>
+                        <span class="addstorenum_name">F</span>
+                        <div class="addstorenum_n"><em>&#xe66a</em><input type="tel"><em>&#xe6b9</em></div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="js/qry_pro_salesdtl.js"></script>
+</body>
+</html>

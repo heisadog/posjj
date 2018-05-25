@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/worktable.css"/>
+    <link rel="stylesheet" href="css/bill.css">
+    <title></title>
+</head>
+<body>
+<header>
+    <div id="backBtn" class="back">&#xe697</div>
+    <span>货品管理</span>
+    <div id="add" class="head_add_btn">&#xe6b9</div>
+    <div id="sear" class="head_add_btn" style="right: 48px;font-size:18px;">&#xe6ac</div>
+</header>
+<div class="coutomer header_search none">
+    <div class="coutomer_li coutomer_lis">
+        <form action="#">
+            <input type="search" id="search" results="5" class="search_input" placeholder="请输入编码或名称">
+        </form>
+    </div>
+    <div class="header_search_right">&#xe718</div>
+</div>
+<div class="view_box" style="height: calc(100% - 50px);
+    height: -webkit-calc(100% - 50px);">
+    <div class="stock_head" id="stock_head">
+        <span style="padding-left: 12px">商品状态</span>
+        <div class="mui-switch mui-active off" id="mui-switch"><div class="mui-switch-handle"></div></div>
+    </div>
+    <!--<ul class="stock_head" id="list_head">
+        <li data-field="xtwpks" data-order="ASC">款号<i>▼</i></li>
+        <li style="width:20%;">名称</li>
+        <li>颜色</li>
+        <li >尺码</li>
+        <li style="float: right;" data-field="kczksl" data-order="ASC">数量 <i>▼</i></li>
+    </ul>-->
+    <div class="wfyContList" style="height: calc(100% - 90px);height: -webkit-calc(100% - 90px)">
+        <div id="cont">
+            <div id="searlist">
+
+                <!--<div class="list_1 list_swiper" style="height:84px; font-size:13px;" data-kcczhm="" data-xtwldm="">
+                    <div class="list_item_1 thd ts200" data-code="">
+                        <div class="item_line">
+                            <span class=""><span style="color:#000">31231231231</span></span>
+                        </div>
+                        <div class="item_line">
+                            <span class="">名称：<span>adfasdf</span></span>
+                            <span class="fr">操作时间：<span>afda</span></span>
+                        </div>
+                        <div class="item_line">
+                            <span class="">总库存：<span>3234</span></span>
+                            <span class="fr"><span style="color: red">￥234</span></span>
+                            </div>
+                        </div>
+                    <div class="list_drap"><div class="list_item_btn btnenable">启用</div><div class="list_item_btn btnenable">停用</div></div>
+                </div>-->
+
+                <!--<div class="list_1 list_swiper" style="height: 28px;">
+                    <div class="list_item_1 thd ts200" data-code="1111">
+                        <ul class="list_item_2">
+                            <li class="w20 tl">1</li>
+                            <li class="w20">连衣裙</li>
+                            <li class="w20">均色</li>
+                            <li class="w20">均码</li>
+                            <li class="w20">15</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="list_drap" style="height: 28px;"><div class="list_item_btn btnenable" style="line-height:28px;">启用</div><div class="list_item_btn btndisable" style="line-height:28px;">停用</div></div>
+                </div>
+
+                <div class="list_1 list_swiper" style="height: 28px;">
+                    <div class="list_item_1 thd ts200" data-code="2222">
+                        <ul class="list_item_2">
+                            <li class="w20 tl">2</li>
+                            <li class="w20">牛仔裤</li>
+                            <li class="w20">均色</li>
+                            <li class="w20">均码</li>
+                            <li class="w20">25</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="list_drap" style="height: 28px;"><div class="list_item_btn btnenable" style="line-height:28px;">启用</div><div class="list_item_btn btndisable" style="line-height:28px;">停用</div></div>
+                </div>-->
+            </div>
+
+            <div class="scrollload none" id="scrollload">
+                <div class="scrollload_img"></div>
+                <span>正在加载更多内容</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom_position_btn">
+    <p class="btncont">数量：<span id="tonum">0</span></p>
+    <p class="btncont">金额：<span id="tomoney">0</span></p>
+</div>
+
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="js/qry_pro_sales.js"></script>
+</body>
+</html>

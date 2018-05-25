@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/bill.css"/>
+    <title></title>
+</head>
+<body>
+<header>
+    <div id="back" class="back">&#xe697</div>
+    <span id="pagename">员工管理</span>
+    <div id="pro_save" class="head_add_btn" style="font-size:16px;width: 60px;">保存</div>
+</header>
+<div class="bill_basic" style="padding-top:48px">
+    <ul class="bill_head_cont thd ts200" id="headlist">
+        <li>
+            <span class="mus">手机号</span>
+            <input class="createTime" type="tel" readonly="readonly" id="mobile" placeholder="请输入手机号"/>
+        </li>
+        <li>
+            <span class="mus">姓名</span>
+            <input class="createTime" id="name" placeholder="请输入姓名"/>
+        </li>
+        <li>
+            <span class="mus">密码</span>
+            <input class="createTime" type="password" id="password" placeholder="请输入密码"/>
+        </li>
+        <li>
+            <span>工号</span>
+            <input class="createTime" id="jobnum" placeholder="请输入工号"/>
+        </li>
+
+        <li>
+            <span class="mus">门店</span>
+            <input class="createTime" id="shop" readonly="readonly" placeholder="请选择门店"/>
+        </li>
+        <li>
+            <span class="mus">岗位</span>
+            <input class="createTime" id="quarters" readonly="readonly" placeholder="请选择岗位"/>
+        </li>
+
+        <li>
+            <span>在职状态</span>
+            <div class="mui-switch mui-active" id="mui-switch">
+                <div class="mui-switch-handle"></div>
+            </div>
+        </li>
+        <li>
+            <span>成本权限</span>
+            <div class="mui-switch" id="cost" data-style='switch'>
+                <div class="mui-switch-handle"></div>
+            </div>
+        </li>
+        <li>
+            <span>收银权限</span>
+            <div class="mui-switch" id="sale" data-style='switch'>
+                <div class="mui-switch-handle"></div>
+            </div>
+        </li>
+
+    </ul>
+</div>
+
+<!--下拉数据-->
+<div id="coverBack" class="pf cover none"></div>
+<div id="multi_box" class="selectBox thd y100 ts200 os" style="height:20%;z-index: 999"></div>
+
+
+<!--角色选择-->
+<div class="tosttop thd y100 ts200" id="tosttop">
+    <div class="tost_can">
+        <div class="tost_cancel" id="tost_cancel">取消</div>
+        <div class="tost_true" id="tost_true">确定</div>
+    </div>
+    <div class="wfyContList" style="height: calc(100% - 40px);height: -webkit-calc(100% - 40px)">
+        <div class="cont">
+            <div id="tosttop_cont">
+                <!--<div class="tost_title">单据类</div>-->
+                <!--<ul class="tost_title_list">-->
+                <!--<li class="addcheck">出库单</li>-->
+                <!--<li>出库单</li>-->
+                <!--<li>出库单</li>-->
+                <!--</ul>-->
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="js/staffmgt_dtl.js"></script>
+</body>
+</html>

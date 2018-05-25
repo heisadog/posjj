@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/mine.css"/>
+    <title></title>
+</head>
+<body>
+<header>
+    <div id="backBtn" class="back">&#xe697</div>
+    <span>我的账单</span>
+    <div id="add" class="head_add_btn">&#xe6b9</div>
+</header>
+<div class="tally">
+    <p id="cht">全部</p>
+    <p>总计支出：<span id="zhichu"></span></p>
+    <div class="tallyTime" id="tallyTime">&#xe639</div>
+</div>
+<div id="list" style="">
+	
+</div>
+
+
+
+<!--弹窗新增 -->
+<div id="addcoverBack" class="pf cover none"></div>
+<div id="addwindow" class="selectBox thd y100  ts200" style="height:200px;" data-type="">
+    <div class="tencentpay_title" style="text-align: center;line-height: 55px"><span id="window_title" style="height: 30px;
+    line-height: 30px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;">新增支出</span></div>
+    <div id="code_div" class="pr item nothing">
+        <span class="w110" id="field_code_title">支出金额</span>
+        <input type="text" id="field_name" class="select" placeholder="支出金额"/>
+    </div>
+    <div id="name_div" class="pr item">
+        <span class="w110" id="field_name_title">支出内容</span>
+        <input type="text" id="field_tel" class="select" placeholder="支出内容"/>
+    </div>
+
+    <div class="bgwhite thd ts200" style="height: 55px;text-align: center">
+        <div id="btn_sure" class="fl w50 main_color border foot_left" style="height: 50px;line-height: 50px">确认</div>
+        <div id="btn_cancel" class="fl w50 bl1 main_color border foot_right" style="height: 50px;line-height: 50px">取消</div>
+    </div>
+</div>
+
+<!--弹窗发时间  y100 -->
+<div class="bill_bot_to_top y100 thd ts200" id="kehu">
+    <div class="bill_slide_head">
+        <div class="bill_slide_head_ok" style="float: left" id="kehu_can">取消</div>
+        <span>选择时间</span>
+        <div class="bill_slide_head_ok" id="kehu_can_add">完成</div>
+    </div>
+    <div id="kehu_list" class="gx_list_1 kehu_list os" style="position: fixed;top:37px; height: calc(100% - 37px);z-index: 122">
+        <div class="tallsytle" id="tallsytle" data-style="day">按日选择</div>
+        <div class="talltime " id="style_day">
+            <p>
+                <input type="text" value="" id="state">至
+                <input type="text" value="" id="end">
+            </p>
+            <p class="talldele">&#xe69d</p>
+        </div>
+        <div class="talltime none" id="style_mouth">
+            <p>
+                <input type="text" id="mouth">
+            </p>
+            <p class="talldele">&#xe69d</p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="js/tally.js"></script>
+</body>
+</html>

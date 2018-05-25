@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <!--<link rel="stylesheet" type="text/css" href="../worktable/css/worktable.css"/>-->
+    <link rel="stylesheet" href="../worktable/css/bill.css">
+    <!--<link rel="stylesheet" type="text/css" href="../home/css/home.css"/>-->
+    <title></title>
+</head>
+<body>
+<header>
+    <div id="back" class="back">&#xe697</div>
+    <span id="pagename">修改密码</span>
+    <div id="btn_confirm" class="head_add_btn" style="font-size:16px;width: 60px;">确认</div>
+</header>
+<div class="bill_basic" style="padding-top:48px">
+    <ul class="bill_head_cont thd ts200" id="headlist">
+        <li><span>当前密码</span>
+            <input class="createTime" type="password" id="curpass" placeholder="请输入当前密码" onchange="checkCurrentPass(this.value);">
+        </li>
+        <li><span>新密码</span>
+            <input class="createTime" type="password" id="newpass" placeholder="请输入新密码">
+        </li>
+        <li><span style="width: auto">确认新密码</span>
+            <input class="createTime" type="password" id="confpass" placeholder="请确认新密码">
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="js/modify_pass.js"></script>
+</body>
+</html>

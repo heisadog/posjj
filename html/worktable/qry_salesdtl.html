@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/worktable.css"/>
+    <title>销售订单管理明细</title>
+</head>
+<body>
+<header>
+    <div id="back" class="back">&#xe697</div>
+    <span>订单明细</span>
+</header>
+
+<section class="view_box" style="height: calc(100% - 50px);
+    height: -webkit-calc(100% - 50px);">
+    <ul class="stock_head" id="stock_head">
+        <li style="width: 32%">款号</li>
+        <li style="width:18%; text-indent: 0">颜色</li>
+        <li style="width: 15%">尺码</li>
+        <li style="width:15%;">数量</li>
+        <li style="width:20%">金额</li>
+    </ul>
+    <div class="wfyContList" style="height: calc(100% - 95px);height: -webkit-calc(100% - 95px)">
+        <div id="cont">
+            <div id="searlist">
+                <!--<div class="list_2">
+                    <ul class="list_item_2">
+                        <li class="w20 tl">5060</li>
+                        <li class="w20">红色</li>
+                        <li class="w20">L</li>
+                        <li class="w20">23</li>
+                        <li class="w20">2323</li>
+                        </ul>
+                    </div>-->
+            </div>
+
+            <div class="scrollload none" id="scrollload">
+                <div class="scrollload_img"></div>
+                <span>正在加载</span>
+            </div>
+        </div>
+        <i style="visibility: hidden">...</i>
+    </div>
+</section>
+
+<div class="bottom_position_btn">
+    <p class="btncont dtlshow none">实销数：<span id="totalnum">0</span></p>
+    <p class="btncont dtlshow none">实销额：<span id="totalmoney">0</span></p>
+    <p class="btncont dtloper none" style="width:100%;">退货</p>
+</div>
+
+<script type="text/javascript" src="../../public/frame/self.js"></script>
+<script type="text/javascript" src="js/qry_salesdtl.js"></script>
+</body>
+</html>
