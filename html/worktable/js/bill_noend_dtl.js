@@ -29,6 +29,9 @@ $(function () {
     //收银
     //------------------------------------------点击 提交（）-------------------------------------------
     $("body").hammer().on("tap", "#sub_sale", function (event) {
+        if($(this).hasClass('cabsdot_bosdt')){
+            return false;
+        }
         if(syqx == 'N'){
             wfy.alert('抱歉，您未有收银权限！');
             return ;

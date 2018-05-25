@@ -101,7 +101,7 @@ var botBtnHtml ='<div class="pub_num">总数：<span id="totalNum">0</span></div
 var botBtnHtml_dtl ='<div class="pub_num">总数：<span id="totalNum">0</span></div>'+
     '<div class="pub_num">总额：<span>￥</span><span id="totalMoney">0</span></div>'+
     '<div class="pub_num pub_btn cabsdot_bosdt" id="sub_save" style="width: 60px">提交</div>'+
-    '<div class="pub_num pub_btn cabsdot_bosdt" id="sub_sale" style="width: 60px">收银</div>';
+    '<div class="pub_num pub_btn " id="sub_sale" style="width: 60px">收银</div>';
 var botBtnHtml_coll = '<div class="pub_num pub_btn" id="sub" style="width: 100%">提交</div>';
 
 var botBtnHtml_noend =  '<div class="pub_num">总额：<span>￥</span><span id="totalMoney">0</span></div>'+
@@ -245,6 +245,7 @@ $(function () {
             if(tipCont =='您选择的支付信息<br>'){
                 tipCont = '订单含有正负商品，总金额为0，请确认商品信息！'
             }
+
             wfy.confirm(tipCont,function () {
                 //生成预订单
                 //如果用户取消 支付，再次点击的时候 生成预订单失败。需要验证预订单的存在
@@ -288,10 +289,12 @@ $(function () {
                     //     //扫一扫
                     //     payScanOrder(preOrdno,preOrdno,mainPayTypeJe)
                     // }
-                    wfy.confirm('此单已生成，中途有取消或者其他操作请到未接订单进行处理',function () {
-                        wfy.pagegoto('bill_noend');
-                    },function () {
-                        window.location.reload();
+                    Components.confirm('此单已生成，中途有取消或者其他操作请到未接订单进行处理',function (flg) {
+                        if(flg){
+                            wfy.pagegoto('bill_noend');
+                        }else {
+                            window.location.reload();
+                        }
                     })
                 }
 
@@ -570,7 +573,7 @@ function refundOrder(_refNo, _date, _money) {
 
 }
 //支付回调
-var payOrder_callback = function (opCode, dataType, data){
+var payOrder_callback_ss = function (opCode, dataType, data){
     // 卧槽 用户竟然不输入密码 再次回来 操作商品！！！避之 数据清除
     //window.location.reload();
     //dataType 为1
@@ -588,6 +591,8 @@ var payOrder_callback = function (opCode, dataType, data){
 
     //alert(resultCode+","+resultMsg+","+appName+","+transId);
     //接口调用成功，业务判断
+    alert(resultCode)
+    alert(_jsondata_["resCode"])
     if(resultCode=="0")
     {
         if(_jsondata_["resCode"]=="00")// 00表示交易成功！
@@ -695,6 +700,78 @@ var payOrder_callback = function (opCode, dataType, data){
              * payErrorCallBack(rcode, rmsg)
              ***************************************************************************/
         }
+    }
+};
+
+
+
+
+//支付回调
+var payOrder_callback = function (opCode, dataType, data){
+    // 卧槽 用户竟然不输入密码 再次回来 操作商品！！！避之 数据清除
+    //window.location.reload();
+    //dataType  为1
+    //alert(opCode+" ----------"+dataType+'-----------'+data);
+    /*
+    * 5.25 当用户支付的时候 取消或者 等待超时的时候，返回的data格式  很简单，
+    * 正常支付的 情况下 返回的串 很长 ，而且后面有很多错乱的字母符号（实际上是二维码的内容）！！！直接转json 会失败
+    * 所以 就 依据 串的长度 分别处理
+    * */
+    //alert(data);
+    var datastr = data.replace(/"{/g, "{").replace(/}"/g, "}");
+    // alert(datastr);
+    // alert(datastr.length);
+    var datajson={};
+    if(datastr.length>300){
+        var datastr_re =  datastr.split(',"memInfo"')[0]+'}}';//memInfo 从memInfo 处截取 前面的内容 并补齐json格式
+        datajson = eval('('+datastr_re+')');
+    }else{
+        datajson = JSON.parse(data);
+    }
+    var resultcode = datajson.resultCode;//接口调用成功，业务判断
+    //alert(resultcode)
+    var transData = {};//承载交易信息
+    if(resultcode =='0'){
+        //0 表示接口成
+        transData = datajson.transData;
+        var resCode = transData.resCode;
+        //alert(resCode);
+        if(resCode == '00'){
+            //00 表示交易成功！
+            merchantNo = transData.merchantNo;
+            rescodeDate = transData.date;
+            runningWater = transData.refNo;
+            cardNo = transData.cardNo;
+            if(pageName == 'msa030_0100'){//销售收银
+                updaState(getCommRequestBean()[2]);
+            }
+            if(pageName == 'msa030_0200'){//收款
+                payOverCallback(true);
+            }
+            if(pageName == 'msa030_0900'){//未接订单
+                updaState(weijiepay);
+            }
+        }else if(resCode =='FJ'){
+            //resCode = FJ 等待超时
+            wfy.alert(transData.resDesc+'请到未接订单处理或重新支付',function () {
+                window.location.reload();
+            })
+        }else if(resCode =='FK'){
+            //resCode = FK 用户取消
+            wfy.alert(transData.resDesc+'请到未接订单处理或重新支付',function () {
+                window.location.reload();
+            })
+        }else{
+            wfy.alert('交易失败！',function () {
+                window.location.reload();
+            })
+        }
+    }else{
+        $.confirm('支付失败，已经生成预订单，继续销售还是前往未结订单页面继续付款？',function () {
+            wfy.pagegoto('bill_noend');
+        },function () {
+            window.location.reload();
+        })
     }
 };
 // 生成 预订单

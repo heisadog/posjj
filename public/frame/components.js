@@ -253,7 +253,7 @@ Components.confirm = function (title, callback) {
         'z-index:' + zzid + ';font-size:15px;' +
         'background:rgba(0,0,0,.6);color:#ffffff;display:none;"></div>' +
         '<div id="' + node.body + '" ' +
-        'style="position:fixed;top:20%;left:8%;right:8%;' +
+        'style="position:fixed;top:30%;left:8%;right:8%;' +
         'z-index:' + zzid + ';font-size:15px;' +
         'border-radius:5px;background:#ffffff;text-align:center;overflow:hidden;' +
         'transform-style:preserve-3d;-webkit-transform-style:preserve-3d;' +
@@ -262,12 +262,12 @@ Components.confirm = function (title, callback) {
         'transition:all .2s;-webkit-transition:all .2s;' +
         'opacity:0;transform:scale(0);-webkit-transform:scale(0);">' +
         '<p style="margin:10px 0;color:#000000;">' + '友情提示' + '</p>' +
-        '<p style="margin:20px;color:#000000;text-align:left;">' + (title || '') + '</p>' +
+        '<p style="margin:20px;text-align:left;">' + (title || '') + '</p>' +
         '<div style="line-height:45px;font-size:16px;border-top:1px solid #d9d9d9;overflow:hidden;">' +
         '<a id="' + node.confirm + '" style="float:left;width:50%;" class="main_color">' +
-        '<b class="stdfont dialog_icon" style="line-height:0;">&#xe615</b>确定</a>' +
+        '<b class="stdfont dialog_icon" style="line-height:0;"></b>确定</a>' +
         '<a id="' + node.cancel + '" style="float:left;width:49%;border-left:solid 1px #d9d9d9;" class="main_color">' +
-        '<b class="stdfont dialog_icon" style="line-height:0;">&#xe630</b>取消</a>' +
+        '<b class="stdfont dialog_icon" style="line-height:0;"></b>取消</a>' +
         '</div></div>');
 
     setTimeout(function () {
