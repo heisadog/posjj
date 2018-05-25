@@ -1416,13 +1416,13 @@ header{
     color: #fff;
     background-color: #f60;
 }
-.pub_bottom_btn .cabsdot_bosdt{
-    background-color: #999999;
-}
+
 .pub_bottom_btn .pub_btn:last-child{
     background-color: red;
 }
-
+.pub_bottom_btn .pub_btn.cabsdot_bosdt{
+    background-color: #999999;
+}
 
 /*gx_list_1*/
 .gx_list_1{
