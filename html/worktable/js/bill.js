@@ -182,6 +182,7 @@ $(function () {
         ],
         onChange:function (p) {
             $('#sub_save').removeClass('cabsdot_bosdt');
+            $('#sub_sale').addClass('cabsdot_bosdt');
             var vue = p.value[0];
             if(vue == '零售'){
                 salestyle = '零售';
@@ -201,6 +202,7 @@ $(function () {
         event.stopPropagation();
         ischanege = false;
         $('#save,#sub_save').removeClass('cabsdot_bosdt');
+        $('#sub_sale').addClass('cabsdot_bosdt');
         var num=$(this).prev().html();
         var txhm = $(this).prev().attr('data-tm');
         var xthh = $(this).prev().attr('data-hh');
@@ -218,6 +220,7 @@ $(function () {
         event.stopPropagation();
         ischanege = false;
         $('#save,#sub_save').removeClass('cabsdot_bosdt');
+        $('#sub_sale').addClass('cabsdot_bosdt');
         var num=$(this).next().html();
         var txhm = $(this).next().attr('data-tm');
         var xthh = $(this).next().attr('data-hh');
@@ -242,6 +245,7 @@ $(function () {
         ischanege = false;
         console.error(pageName)
         $('#save,#sub_save').removeClass('cabsdot_bosdt');
+        $('#sub_sale').addClass('cabsdot_bosdt');
         var num = 0;
         var txhm = $(this).attr('data-tm');
         var xthh = $(this).attr('data-hh');
@@ -437,6 +441,7 @@ $(function () {
         event.stopPropagation();
         ischanege = false;
         $('#save,#sub_save').removeClass('cabsdot_bosdt');
+        $('#sub_sale').addClass('cabsdot_bosdt');
         $("#oper_save").removeClass("cabsdot_bosdt");
         var ksdm = $(this).attr('data-ksdm');
         var index = 0;
@@ -463,6 +468,7 @@ $(function () {
             event.stopPropagation();
             ischanege = false;
             $('#save,#sub_save').removeClass('cabsdot_bosdt');
+            $('#sub_sale').addClass('cabsdot_bosdt');
             var data_index = 0 ;//data的索引
             var cont_index = 0 ;//cont的索引
             data_index = $(this).parents('.bill_sku').attr('data-index');
@@ -485,6 +491,7 @@ $(function () {
             event.stopPropagation();
             ischanege = false;
             $('#save,#sub_save').removeClass('cabsdot_bosdt');
+            $('#sub_sale').addClass('cabsdot_bosdt');
             var data_index = 0 ;//data的索引
             var cont_index = 0 ;//cont的索引
             data_index = $(this).parents('.bill_sku').attr('data-index');
@@ -513,6 +520,7 @@ $(function () {
             event.stopPropagation();
             ischanege = false;
             $('#save,#sub_save').removeClass('cabsdot_bosdt');
+            $('#sub_sale').addClass('cabsdot_bosdt');
             var data_index = 0 ;//data的索引
             var cont_index = 0 ;//cont的索引
             data_index = $(this).parents('.bill_sku').attr('data-index');
