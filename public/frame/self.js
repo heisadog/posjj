@@ -6,6 +6,7 @@ document.write('<link rel="stylesheet" type="text/css" href="../../public/css/pu
 
 document.write('<script type="text/javascript" src="../../public/frame/jq2.2.3.js"></script>');
 document.write('<script type="text/javascript" src="../../public/frame/jquery-weui.min.js"></script>');
+document.write('<script type="text/javascript" src="../../public/frame/jquery.qrcode.min.js"></script>');
 document.write('<script type="text/javascript" src="../../public/frame/const.js"></script>');
 document.write('<script type="text/javascript" src="../../public/frame/jquery-lgx.js"></script>');
 document.write('<script type="text/javascript" src="../../public/frame/basic.js"></script>');

@@ -12,14 +12,20 @@
     <span>我的账单</span>
     <div id="add" class="head_add_btn">&#xe6b9</div>
 </header>
-<div class="tally">
-    <p id="cht">全部</p>
-    <p>总计支出：<span id="zhichu"></span></p>
-    <div class="tallyTime" id="tallyTime">&#xe639</div>
+
+<div class="view_box" style="height: calc(100% - 45px);height: -webkit-calc(100% - 45px);">
+    <div class="tally">
+        <p id="cht">全部</p>
+        <p>总计支出：<span id="zhichu"></span></p>
+        <div class="tallyTime" id="tallyTime">&#xe639</div>
+    </div>
+    <div class="wfyContList" style="height: calc(100% - 52px);
+    height: -webkit-calc(100% - 52px);">
+        <div id="list" class="os"></div>
+    </div>
+
 </div>
-<div id="list" style="">
-	
-</div>
+
 
 
 
@@ -33,13 +39,14 @@
     font-size: 18px;
     margin-top: 10px;
     margin-bottom: 10px;">新增支出</span></div>
-    <div id="code_div" class="pr item nothing">
-        <span class="w110" id="field_code_title">支出金额</span>
-        <input type="text" id="field_name" class="select" placeholder="支出金额"/>
-    </div>
-    <div id="name_div" class="pr item">
+
+    <div id="name_div" class="pr item nothing">
         <span class="w110" id="field_name_title">支出内容</span>
         <input type="text" id="field_tel" class="select" placeholder="支出内容"/>
+    </div>
+    <div id="code_div" class="pr item">
+        <span class="w110" id="field_code_title">支出金额</span>
+        <input type="text" id="field_name" class="select" placeholder="支出金额"/>
     </div>
 
     <div class="bgwhite thd ts200" style="height: 55px;text-align: center">

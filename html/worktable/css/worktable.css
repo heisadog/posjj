@@ -920,7 +920,13 @@
     -moz-transform: rotate(135deg);
     transform: rotate(135deg);
 }
-
+.tallitem {
+    line-height: 24px;
+    background-color: #FFF;
+    text-align: left;
+    padding: 5px 12px;
+     border-bottom: 1px solid #D9D9D9;
+}
 
 
 

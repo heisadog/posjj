@@ -138,11 +138,11 @@ $(function () {
         event.stopPropagation();
         var that = $(this);
         localStorage.mddm = $(this).attr('data-wldm');
-        DepartmentCode = $(this).attr('data-wldm');
+        //DepartmentCode = $(this).attr('data-wldm');
         setTimeout(function () {
             var mddm = that.attr('data-wldm');
             var mdmc = that.html();
-            localStorage.wldm = mddm;
+            //localStorage.wldm = mddm;
             $('#storeName').html(wfy.cutstr(mdmc,4));
             getHomeHeadMes(mddm);
             //总店 是 和
@@ -556,17 +556,32 @@ function getShopName() {
 
     var ip = new InvokeProc();
     ip.addBusiness(vBiz);
+    console.log(JSON.stringify(ip))
     ip.invoke(function(d){
         if ((d.iswholeSuccess == "Y" || d.isAllBussSuccess == "Y")) {
             // todo...
             var result = vOpr1.getResult(d, "AC_RESULT_CORR").rows || [];//获取公司名
             storeArr = vOpr2.getResult(d, "AC_RESULT_SHOP").rows || [];//获取店铺名
-            $('#storeName').html(wfy.cutstr(storeArr[0].mdmc,4));
-            if(storeArr.length == 1){
-                localStorage.mddm=storeArr[0].mddm;
+            if(wfy.empty(localStorage.mddm)){
                 $('#storeName').html(wfy.cutstr(storeArr[0].mdmc,4));
-                $('#storeName').removeClass('daosji')
+                localStorage.mddm=storeArr[0].mddm;
+            }else {
+                if(storeArr.length == 1){
+                    localStorage.mddm=storeArr[0].mddm;
+                    $('#storeName').html(wfy.cutstr(storeArr[0].mdmc,4));
+                    $('#storeName').removeClass('daosji')
+                }else {
+                    for(var i = 0; i<storeArr.length; i++){
+                        if(localStorage.mddm == storeArr[i].mddm){
+                            $('#storeName').html(wfy.cutstr(storeArr[i].mdmc,4));
+                            localStorage.mddm=storeArr[i].mddm;
+                        }
+                    }
+                }
             }
+            console.log(storeArr)
+            console.log(localStorage.mddm)
+
             //所有店铺公司拼接字符串--在我的账单中使用
             var temparr=[];
             for(var i=0;i<storeArr.length;i++){

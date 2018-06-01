@@ -2895,33 +2895,7 @@ Components.bluetoothPrint.printTicket100 = function (xphm,fn) {
 }
 
 // Components.bluetoothPrint.printTicket100('M180400105821')
-//Components.bluetoothPrint.printTicket100('M180400116501')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//Components.bluetoothPrint.printTicket100('M180400116
 /**
  * 本地通知
  * @type {{}}

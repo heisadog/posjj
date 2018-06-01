@@ -34,15 +34,20 @@ $(function(){
 	//新增按钮
 	$('body').hammer().on('tap', '#btn_sure', function (event) {
 		event.stopPropagation();
-		var name = $("#field_name").val();
-		var tel = $("#field_tel").val();
-		if(name =='' || tel == ''){
+		var je = $("#field_name").val();
+		var sm = $("#field_tel").val();
+		if(je =='' || sm == ''){
 			wfy.alert('请输入标题和支出内容');
 			return false;
 		}
+		var flag = priceVali(je);
+		if(!flag){
+			wfy.alert("请填写有效的金额");
+			return;
+		}
 		wfy.closeFream('addcoverBack',"addwindow");
 		$('#addwindow').css("bottom","-200px");
-		vipAdd(name,tel);
+		vipAdd(je,sm);
 	});
 	//时间方式
 	$('body').hammer().on('tap','#tallsytle',function (event) {
@@ -86,6 +91,29 @@ $(function(){
 		// console.log(AS_QSRQ)
 		// console.log(AS_JZRQ)
 		getList()
+	})
+	//删除
+	$('body').hammer().on('tap','.btnde',function (event) {
+		event.stopPropagation();
+		var code = $(this).attr('data-code');
+		var vBiz = new FYBusiness("biz.sawork.wljz.delete");
+		var vOpr1 = vBiz.addCreateService("svc.sawork.wljz.delete", false);
+		var vOpr1Data = vOpr1.addCreateData();
+		vOpr1Data.setValue("AS_USERID", LoginName);
+		vOpr1Data.setValue("AS_WLDM", DepartmentCode);
+		vOpr1Data.setValue("AS_FUNC", "svc.sawork.wljz.delete");
+		vOpr1Data.setValue("AS_CZHM", code);
+		var ip = new InvokeProc();
+		ip.addBusiness(vBiz);
+		ip.invoke(function(d){
+			if ((d.iswholeSuccess == "Y" || d.isAllBussSuccess == "Y")) {
+				// todo...
+				getList()
+			} else {
+				// todo...[d.errorMessage]
+				wfy.alert(d.errorMessage)
+			}
+		}) ;
 	})
 	$("#state").datetimePicker({
 		title: '请选择时间',
@@ -156,6 +184,15 @@ $(function(){
 		}
 	})
 })
+function priceVali(price) {
+	var reg = /(^[1-9]([0-9]+)?(\.[0-9]{1,2})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/;
+
+	if (reg.test(price)) {
+		return true;
+	}else{
+		return false;
+	};
+}
 function getList () {
 	var vBiz = new FYBusiness("biz.sawork.wljz.qry");
 	var vOpr1 = vBiz.addCreateService("svc.sawork.wljz.qry", false);
@@ -179,8 +216,18 @@ function getList () {
 			}
 			for(var i = 0; i<res.length; i++){
 				//html+='<div class="item">'+res[i].jzje+res[i].jzsm+'</div>';
-				html+='<div class="tallitem">'+res[i].jzsm+'<span style="float: right;font-size:14px;color: #1a1a1a">'+res[i].jzje+'</span>' +
-					'<p style="font-size:12px; color:#999">'+res[i].jzdate.slice(0,10)+'</p>' +
+				html+='<div class="list_1 list_swiper" style="height:60px; font-size:13px;" data-code="'+res[i].jzczhm+'">'+
+							'<div class="list_item_1 thd ts200" data-code="'+res[i].jzczhm+'">'+
+								'<div class="item_line">'+
+								'<span class=""><span style="color:#000">'+res[i].jzsm+'</span></span>'+
+								'<span style="float: right;font-size:14px;color: #1a1a1a">'+res[i].jzje+'</span>'+
+								'</div>'+
+								'<div class="item_line">'+
+								'<p style="font-size:12px; color:#999">'+res[i].jzdate.slice(0,10)+'' +
+					              '<span style="float: right;">'+res[i].xtwlmc+'</span></p>'+
+								'</div>'+
+							'</div>'+
+					        '<div class="list_drap"><div class="list_item_btn btnde" style="line-height: 60px"  data-code="'+res[i].jzczhm+'">删除</div></div>'+
 					'</div>';
 				je = Components.add(je,res[i].jzje)
 			}
@@ -228,15 +275,17 @@ function getList () {
 	}) ;
 
 }
-var vipAdd = function (name,tel) {
+var vipAdd = function (je,sm) {
 	var vBiz = new FYBusiness("biz.sawork.wljz.save");
 	var vOpr1 = vBiz.addCreateService("svc.sawork.wljz.save", false);
 	var vOpr1Data = vOpr1.addCreateData();
 	vOpr1Data.setValue("AS_USERID", LoginName);
 	vOpr1Data.setValue("AS_WLDM", DepartmentCode);
 	vOpr1Data.setValue("AS_FUNC", "svc.sawork.wljz.save");
-	vOpr1Data.setValue("AS_JZJE", (name));
-	vOpr1Data.setValue("AS_JZSM", tel);
+	vOpr1Data.setValue("AS_CZHM", Components._uuid());
+	vOpr1Data.setValue("AS_WLMD", localStorage.mddm);
+	vOpr1Data.setValue("AS_JZJE", (je));
+	vOpr1Data.setValue("AS_JZSM", sm);
 	var ip = new InvokeProc();
 	ip.addBusiness(vBiz);
 	console.log(JSON.stringify(ip))

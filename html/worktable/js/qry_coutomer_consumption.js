@@ -103,6 +103,7 @@ $(function () {
     $('body').hammer().on('tap', '.list_2', function (event) {
         event.stopPropagation();
         var hykh = $(this).attr('data-hykh');
+        //console.log(hykh)
         wfy.pagegoto('qry_coutomer_consumption_dtl',hykh)
     });
 
